@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon"
+	href="assets/images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+
+	<title>詳細画面</title>
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="assets/thirdparty/bootstrap-3.3.7/css/bootstrap.css">
+	<link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Header -->
+	<nav class="navbar navbar-static-top navbar-inverse">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+			</button>
+			<a href="./" class="navbar-brand">明るい低炭素社会</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+		id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav" id="nav">
+			<li>
+				<a href="search.html"><span class="glyphicon glyphicon-search"></span>&nbsp;検索</a>
+			</li>
+			<li>
+				<a href="analyze.html"><span class="glyphicon glyphicon-stats"></span>&nbsp;分析</a>
+			</li>
+			<li>
+				<a href="map.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;地図検索</a>
+			</li>
+
+
+		</ul>
+
+	</div>
+</div>
+</nav>
+
+<div class="sm green tile" onclick="move('index.html')">
+	<span class="glyphicon glyphicon-globe"></span>&nbsp;明るい低炭素社会
+</div>
+<div class="sm light tile" id="gp"></div>
+<div class="sm dense tile" id="field"></div>
+<div class="title dense2">関連事例の詳細</div>
+
+<div class="container">
+
+	<h3>社会実験事例データの詳細</h3>
+
+	<table class="table table-bordered table-striped table-hover">
+		<tbody id="listBody">
+			<tr>
+				<th style="width: 30%" class="dense">タイトル</th>
+				<td id="title"></td>
+			</tr>
+			<tr>
+				<th class="dense">グループ名</th>
+				<td id="group"></td>
+			</tr>
+			<tr>
+				<th class="dense">関連する社会実験</th>
+				<td id="exp"></td>
+			</tr>
+			<tr>
+				<th class="dense">フェーズ</th>
+				<td id="process"></td>
+			</tr>
+			<tr>
+				<th class="dense">種別</th>
+				<td id="type"></td>
+			</tr>
+			<tr>
+				<th class="dense2">事象</th>
+				<td id="problem"></td>
+			</tr>
+			<tr>
+				<th class="dense2">国・自治体等の制度上の課題</th>
+				<td id="problemSystem"></td>
+			</tr>
+			<tr>
+				<th class="dense2">ステークホルダー間の利害調整上の課題</th>
+				<td id="problemInterest"></td>
+			</tr>
+			<tr>
+				<th class="dense2">普及等にあたっての効果/課題</th>
+				<td id="problemDiffusion"></td>
+			</tr>
+			<tr>
+				<th class="dense2">社会実験の技術的な課題</th>
+				<td id="problemTech"></td>
+			</tr>
+			<tr>
+				<th class="dense2">課題の効果影響</th>
+				<td id="influence"></td>
+			</tr>
+			<tr>
+				<th class="dense2">課題発生時の対処状況</th>
+				<td id="solution"></td>
+			</tr>
+			<tr>
+				<th class="dense2">その後の対応</th>
+				<td id="service"></td>
+			</tr>
+			<tr>
+				<th class="dense2">取りうる対策</th>
+				<td id="improvement"></td>
+			</tr>
+			<tr>
+				<th class="dense2">対応の結果</th>
+				<td id="condition"></td>
+			</tr>
+			<tr>
+				<th class="dense2">社会実験成果の適用に必要な条件</th>
+				<td id="suggestion"></td>
+			</tr>
+			<tr>
+				<th class="dense2">適用対象</th>
+				<td id="place"></td>
+			</tr>
+			<tr>
+				<th class="dense2">キーワード</th>
+				<td id="keyword"></td>
+			</tr>
+			<tr>
+				<th class="dense2">場所</th>
+				<td id="location"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div style="float: right; padding: 10px;">
+		<a class="btn dense2" href="javascript:history.back();">戻る
+			&raquo;</a>
+		</div>
+	</div>
+
+	<p style="height: 10px"></p>
+
+	<div class="footer">
+		<span>&copy; 2014 <a
+			href="http://low-carbon.k.u-tokyo.ac.jp/">明るい低炭素社会の実現に向けた都市変革プログラム</a>
+			All Rights Reserved.
+		</span>
+	</div>
+
+
+
+</body>
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="assets/thirdparty/bootstrap-3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/uri.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	//サーバへ検索
+	detail();
+});
+
+var arg  = new Object;
+url = location.search.substring(1).split('&');
+
+for(i=0; url[i]; i++) {
+	var k = url[i].split('=');
+	arg[k[0]] = decodeURIComponent(k[1]);
+}
+
+var uri = arg["uri"];
+
+var title;
+var keyword;
+
+function detail() {
+
+	var que = getPrefixes();
+
+	que += " SELECT DISTINCT * ";
+
+	que += " WHERE { ";
+	que += " <" + uri + "> ?v ?o . ";
+	que += " OPTIONAL { ?o se:exTitle ?exp. } ";
+	que += " } ";
+
+	$.ajax({
+		type : "POST",
+		url : 'https://dydra.com/ut-digital-archives/sedb/sparql',
+		data : {
+			query : que
+		},
+		success : function(data) {
+
+			var result = data.results.bindings;
+
+			for (var i = 0; i < result.length; i++) {
+
+				var obj = result[i];
+
+				var key = obj.v.value.replace(prefixes.se, "");
+				var value = obj.o.value;
+
+				value = value.replace(/\\n/g, "<br>"); //改行表現の置換
+				$("#" + key).append(value);
+
+				if (obj.exp) {
+
+					var exp = obj.exp.value;
+
+					//Table
+					$("#exp").text(exp);
+
+					//Bar
+					var div = $("#field");
+					div.attr("onclick", "move('group.html?uri=" + value + "')");
+					div.text(exp + "の概要");
+
+				} else {
+					value = value.replace(/\\n/g, "<br>"); //改行表現の置換
+					$("#" + key).empty();
+					$("#" + key).append(value);
+				}
+
+
+
+				if (key == "keyword") {
+					keyword = value;
+				}
+				if (key == "title") {
+					title = value;
+				}
+
+				if (key == "group") {
+
+					//Bar
+					var div = $("#gp");
+					div
+					.attr("onclick", "move('index.html?group=" + value
+					+ "')");
+					div.empty();
+					div.append(value.replace("G", "グループ"));
+				}
+			}
+			;
+		}
+	});
+}
+
+function move(data) {
+	location.href = data;
+}
+</script>
+
+</html>

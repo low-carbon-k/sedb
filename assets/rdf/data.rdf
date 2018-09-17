@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://www.teitanso.org/2012/04/se#">
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/059cc1cca31ac7400e89b9d80ec880cb">
+    <ns0:condition>解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement>今後は使用頻度を高めていきながら、実装に移行していきたいと考えている。</ns0:improvement>
+    <ns0:influence>土地建物の契約を伴う社会実験について、大学が主体となって実施することが困難となる</ns0:influence>
+    <ns0:keyword>賃貸借契約　大学規定</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>場所の賃貸借について、オーナーとは、安価に借りる合意が得られていたが、東大が賃貸借契約の主体になれるか、大学の規定上、年度を越えて後日返還される敷金は払えないといったハードルがあった。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem>大学法人としての敷金の扱い。</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service>今後は、半年ごとに契約していくことになる。</ns0:service>
+    <ns0:solution>社会実験会場使用料という名目で６ヶ月前払いにすることでクリアした。大家としても一定期間前払いとすることでリスクが回避できるので合意できた。\
+（なお、昨年は月に３、４日のみの使用であったため、無償で借りていた。）</ns0:solution>
+    <ns0:suggestion></ns0:suggestion>
+    <ns0:title>賃貸借契約</ns0:title>
+    <ns0:type>制度</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/09f48089ed78a7f39841e550add26bb6">
+    <ns0:condition></ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/teitansonouhou"/>
+    <ns0:group>農業・緑地計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>水田の低炭素農法を導入するメリットがやや薄れる</ns0:influence>
+    <ns0:keyword>低炭素農法　水田　効果測定</ns0:keyword>
+    <ns0:place>農業技術論であるので、全国共通である。</ns0:place>
+    <ns0:problem>「低炭素農法」の効果は明白である。2011年、2012年の実験結果は、ともにGHG放出量を半分以下に抑えることができた。</ns0:problem>
+    <ns0:problemDiffusion>なし</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>新しい農法に対する人々の理解を深めること</ns0:problemTech>
+    <ns0:process>検証段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>サイエンスとしては、なし</ns0:solution>
+    <ns0:suggestion></ns0:suggestion>
+    <ns0:title>１。水田の低炭素農法のGHG（メタン、亜酸化窒素）削減効果（橋本－４）</ns0:title>
+    <ns0:type>技術</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/0c1dfea49de7e0eaf78c79ec70d88dcb">
+    <ns0:condition></ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/teitansonouhou"/>
+    <ns0:group>農業・緑地計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence></ns0:influence>
+    <ns0:keyword>低炭素農法　水田　効果測定</ns0:keyword>
+    <ns0:place>農業技術論であるので、全国共通である。</ns0:place>
+    <ns0:problem>「低炭素農法」の精度については、サイエンスとして問題がないわけではない。一定期間ごとにガスを採取し、測定しているため、平均値としては問題ないと考えられるが、連続的に測っているわけではないので、本当にそれで正しいか、と問われると、それには誰も応えることができない。もしも答えようとすれば、栽培実験施設をすっぽり覆うチャンバーを作り、その中で栽培するしかない。しかし、このような大がかりな実験施設は、小規模な畑作で実施されているものの、水田での実施例はない。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>今回の社会実験における効果把握は、既存文献や既存研究成果による効果原単位等を用いることで対応できる。\
+今後測定精度向上のためには、大掛かりな研究施設も必要となるが、そうした精緻なデータの必要性との兼ね合いで判断されるべきである。</ns0:suggestion>
+    <ns0:title>２。水田の低炭素農法のGHG（メタン、亜酸化窒素）測定精度（橋本－４）</ns0:title>
+    <ns0:type>技術</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/0c729ea56f21917ce0333e539721f5d8">
+    <ns0:condition>解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>食費等を伴う社会実験の実施が困難となる可能性</ns0:influence>
+    <ns0:keyword>補助金　食費　コミュニティカフェ　</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>本年度の事業計画書について、コミュニティカフェ関連の実験について、「開催内容において、食材や飲食資機材に関する経費は補助対象外経費」とされた。実施したいと思っている実験ができないことがある可能性がある。また、内装等の費用負担もできず、「実装」することを目的としている研究意図と反している。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem>補助金で許容される経費の範囲。</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>参加者負担（要確認）</ns0:solution>
+    <ns0:suggestion></ns0:suggestion>
+    <ns0:title>研究費で許容される経費の範囲</ns0:title>
+    <ns0:type>制度</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/0f4ee90a7fe7b51f326305646e643d77">
+    <ns0:condition>解決</ns0:condition>
+    <ns0:exRdfName>
+      <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/taihi">
+        <ns0:exTitle>有機堆肥</ns0:exTitle>
+        <ns0:finance>研究費</ns0:finance>
+        <ns0:organization>東大、ＮＰＯ、民間企業、柏市</ns0:organization>
+        <ns0:purpose>単独では資源にならない有機物どうしを組み合わせることにより資源化し、有機性資源として地域で活用するスキームの基礎をつくる。</ns0:purpose>
+        <ns0:sequence>外食系の民間企業では、生ゴミは単独では資源とならず、処理にコストをかけていた。一方里山管理団体（ＮＰＯ）は、管理時に発生する間伐材が現状では有効利用できず、焼却処理していた。</ns0:sequence>
+        <ns0:summary>廃棄物として処理されている生ゴミと、需要がなく未利用の里山間伐材等の木質チップとを原料とした有機堆肥を製造し、最適な混合比や堆肥としての性能を明らかにする。またその際に異分野連携が必要とされるので、連携を支援する仕組みを構築、実装する。</ns0:summary>
+      </rdf:Description>
+    </ns0:exRdfName>
+
+    <ns0:group>農業・緑地計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence></ns0:influence>
+    <ns0:keyword>生ゴミ　里山管理　バイオマス　異分野連携</ns0:keyword>
+    <ns0:place>里山と住宅地等が近接する大都市郊外部に可能性がある。</ns0:place>
+    <ns0:problem>今のところ特になし。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest>これまで関係のなかった外食系の民間企業と里山管理ＮＰＯとの連携が必要となるため、第三者的なコーディネータが必要となる。</ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>木質チップの分解能力が低い、もしくは、生ゴミを過剰に投入してしまった場合に、腐敗や臭気の発生が問題となる可能性がある。</ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>大学および行政が仲立ちして、企業とＮＰＯの連携を支援している。大学は、企業とＮＰＯに対して、実験の意義を説明し、参加に向けた説得を行った。行政は、企業とＮＰＯに対して「カシニワ」制度関連団体への登録を提案し、実際に登録を行うことにより、連携のきっかけをつくった。</ns0:solution>
+    <ns0:suggestion>農園利用者は増加傾向にあるため、有機堆肥の需要は確実に存在している。従って、製造された堆肥が良質であること、一定量がコンスタントに製造できること、栽培実験等を通じて施肥効果が確認されていること、等の条件を満たせば、資源の地域内活用が可能となる。</ns0:suggestion>
+    <ns0:title>里山からの木質チップと生ゴミを混合した有機堆肥の製造実験</ns0:title>
+    <ns0:type>技術/運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/0fa3107623e473dee97f8f61e9df00f1">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>モビリティG</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>短距離利用が中心と想定されるが、ごく短距離の利用に限定される。</ns0:influence>
+    <ns0:keyword>キャパシタ　充電　走行距離　超小型モビリティ</ns0:keyword>
+    <ns0:place>一定距離内での移動が多い大都市圏が中心</ns0:place>
+    <ns0:problem>充電時間が長く、ゼロから始めると、6～8時間かかる。\
+キャパシタ・ワイヤレス給電では1～2 kmしか走れない。もっとも、ワイヤレス給電は都市向けであり、農村部では向いてない。すなわち、今のところ家で長時間充電するしかない。\
+</ns0:problem>
+    <ns0:problemDiffusion>現状、短距離での走行での利用向けへの普及に限られる。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>都市部の短距離利用</ns0:suggestion>
+    <ns0:title>コムスの充電時間</ns0:title>
+    <ns0:type>技術</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/10a9e2ed8312d86b4518b08c49a8b481">
+    <ns0:condition>解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>社会実験ができない、もしくは計画変更が必要となる</ns0:influence>
+    <ns0:keyword>補助金　工事費　支出</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>開業にあたって、入居する空き店舗の内装工事が必要となる。現在、天井のアスベストの覆い、壁の養生（ほこり対策）をしているが、エアコンの設置、サッシがない（現在入り口がシャッターのみ）ことへの対処が課題となっているが、工事費を補助金で支出できないことでコミュニティ拠点の整備が困難となる。内装については当初自治体の助成金を狙う予定であったが、高額な自己資金部分を住民たちで用意することができず断念した。　当初８５０万円程度の内装の大半をあきらめ、雨風と寒さ暑さをしのげる最低限の内装とした。　　　</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem>JSTの補助金の使途として、社会実験が終われば返還可能な状態とすることが必要であり、エアコン、サッシの設置は費用として認められないことにいかに対応するか検討中である。その後、すべて研究費では認められず、大家に最低限のものを設置してもらって賃貸することになった。\
+</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>補助金以外の財源の確保、補助金の制度改正</ns0:suggestion>
+    <ns0:title>工事費の手当て</ns0:title>
+    <ns0:type>制度</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/1ad1e9a908438fa0b18d446b7f33abaa">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement>実験不参加層の意見も拾えるよう、もう一度全体にアンケートをとる必要があるのかもしれない。</ns0:improvement>
+    <ns0:influence>適切な効果計測ができなくなるおそれ</ns0:influence>
+    <ns0:keyword>効果計測　サンプル　被験者</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>実際に社会実験を実施する前に、参加者等の意識など調査し、事前と事後の比較の仕組みを入れておかないと、効果の検証が困難となる。\
+実証実験参加者は、そもそも好意的な人が多く参加するので、その人たちだけのアンケートをしても、「良い」と答える方向にバイアスがかかるため、参加者のバイアスを如何に排除するかが課題である。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>事業性というのか、実現性はどうか、という意味での実験、実現性を見極めるための工夫もしなければいけないのではないか。\
+ニーズの把握と、事前事後の評価ができるようにしたい。\
+サンプル数の確保、活動者の状況・意識・変化等のデータ取得が必要。</ns0:problemTech>
+    <ns0:process>検証段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>事前事後の効果計測、参加者以外のデータ計測</ns0:suggestion>
+    <ns0:title>コミュニティ拠点・ちょい農等の社会実験の効果の把握</ns0:title>
+    <ns0:type>検証</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/1fad304708a359557f4cd889b858f32f">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexisyokubutui"/>
+    <ns0:group>植物医科学G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>プロジェクト終了後の効果の捕捉が困難となる恐れ</ns0:influence>
+    <ns0:keyword>植物医師　アンケート</ns0:keyword>
+    <ns0:place>園芸に興味を持つ市民を対象にする場合、大都市圏が中心と想定される</ns0:place>
+    <ns0:problem>日常生活（屋外活動時間、病院通院回数等）の変化、知識の変化（知っている植物病の種類、認知できた種類等）を確認するため、アンケートを実施。</ns0:problem>
+    <ns0:problemDiffusion>継時的に結果を分析したいところであるが、プロジェクト終了後は難しい。プロジェクト期間終了後の運営について、参加者に移管する方向で検討中だが、金銭面・労力面の負担をどうするか、組織運営体制をどうするかが懸念事項。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>検証段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>市民園芸へのニーズが一定程度存在する地域であること。</ns0:suggestion>
+    <ns0:title>プロジェクト終了後の効果の捕捉</ns0:title>
+    <ns0:type>検証</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/2209d1c81a2df67bb5e5f22d43fc4998">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/teitansonouhou"/>
+    <ns0:group>農業・緑地計画G</ns0:group>
+    <ns0:improvement>意義効果の分かりやすいPR</ns0:improvement>
+    <ns0:influence>たとえ実験がおこなえても、参加者満足度が低くなり、実装につながらなくなるおそれがある</ns0:influence>
+    <ns0:keyword>低炭素農法　水田　</ns0:keyword>
+    <ns0:place>市民農園への適用を中心とした場合、大都市圏の適用性が高い。</ns0:place>
+    <ns0:problem>低炭素農法は、従来の農法と比べ作業量は、増えても微増にとどまる程度であるが、従来の稲作法と異なる部分が多いため、導入の際の心理的抵抗が大きい。・難易度が上がる割にメリットがあまり知られていない。たとえば、定量化しやすい収量については現在の農法と変わらない。日本の農法はある程度完成されているからである。その他のメリットとしては、水をあまり与えないため稲の根が強くなり、茎も太くなることで、台風等による倒伏に強くなることが挙げられる。我々の実験では倒伏する割合は「低炭素農法：従来の農法＝32：80（2008年）」、「低炭素農法：従来の農法＝10：55（2009年）」という数値が出ている。日本の一部地域...</ns0:problem>
+    <ns0:problemDiffusion>強い稲ができる可能性があるという効果があるが、従来とは違う農法で新しいことをするというリスクもある。また、あまり周囲からは喜ばれない。理由は雑草で、この農法は水を張り続けないため雑草が多い。そのためか、現在低炭素農法は日本では普及しておらず、この農法を知っている人は200人程度。実際にやっている人は10人超程度である。</ns0:problemDiffusion>
+    <ns0:problemInterest>強い稲ができる可能性があるという効果があるが、従来とは違う農法で新しいことをするというリスクもあるなか、知名度も低く、実施例も少ない低炭素農法について、市民参加に興味をもってもらえるか。\
+\
+</ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>水田での除草作業の機械化はまだできていないため、日本において、低炭素農法は従来農法と比べて人手は非常にかかるのに収量は現在と変わらない。さらに、雑草が多いため、周囲へ悪い影響を与えてしまう。</ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>農業生産活動がGHGを多く出している現実は、否定できない。しかし、食料生産は、どこかの国、どこかの地域で担わなければならず、生産を止めるわけにはゆかない。そうした状況の中で、余暇活動である市民農園活動が、「地球にやさしい農法」を採用することは、参加者の満足度に繋がる。</ns0:solution>
+    <ns0:suggestion>実装を成功させるためには。低炭素農法の３つのメリット、すなわち①（全体量からすると小さいが）低炭素にできること　②風に強く、倒伏しづらい稲になること　③手間をかけることにより、達成感が上がること　を周知させる必要がある。</ns0:suggestion>
+    <ns0:title>４。水田低炭素農法の市民農園への適用性（１）メリット（橋本－２）</ns0:title>
+    <ns0:type>参加者</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/256b06aacd751e0f7fe4a378e696068e">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/kashiniwa"/>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement>資格制度とか、何かあこがれのようなもの、ある種の切磋琢磨するもの、表彰制度などもありうる。\
+完全にボランタリーにちょい〇〇があるのではなく、それもビジネスになるようなことを考えていかなければならない。</ns0:improvement>
+    <ns0:influence>社会実験から実装に移れない恐れ</ns0:influence>
+    <ns0:keyword>資格制度　表彰制度　社会実装</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>今度は、本気になって付き合い始めたときに、本当にその地域で行けそうなのか、ちょいではなく本気の可能性のほうも考えなければならないのではないか。\
+社会実験が終了して、研究費がなくなった後も継続できる仕組みが必要。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>実装段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>実装につながる動機づけ</ns0:suggestion>
+    <ns0:title>ちょい農・コミュニティ拠点の社会実験からの実装</ns0:title>
+    <ns0:type>運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/2957deaad62f4d6cf018e104b0a60e15">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexisyokubutui"/>
+    <ns0:group>植物医科学G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>市民の参加意欲を高めつつ、参加者の一定の質を確保することが困難となる。</ns0:influence>
+    <ns0:keyword>植物医師　認定試験　資格制度</ns0:keyword>
+    <ns0:place>エリアの制限はないと考えられる</ns0:place>
+    <ns0:problem>試験に合格した際に、資格を与えることができない。国家資格に相当するような資格として残るものを得たいという市民の声が存在する。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem>国家資格に相当するような資格を提供可能な枠組みの考案</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>試験合格者への認定証の発行</ns0:solution>
+    <ns0:suggestion>市民の参加意欲を高めつつ、参加者の一定の質を確保するための方法を検討する必要がある。</ns0:suggestion>
+    <ns0:title>認定試験の資格制度</ns0:title>
+    <ns0:type>制度</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/37861b4f2023ea51715c9c6e61b2a714">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/kashiniwa"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement>NPOの活動を通じた情報発信の活発化などが考えられる。</ns0:improvement>
+    <ns0:influence>新若柴のケースでは、財団が苗を提供してくれるため、それに頼ってしまうという側面もある。</ns0:influence>
+    <ns0:keyword>資材調達　個人ネットワーク</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>自由広場の整備も、個人的な人のネットワークを介して、物品の調達等ができている状況である。</ns0:problem>
+    <ns0:problemDiffusion>ウッドチップについては東大教員が大青田の里山管理にも参加していることから自由広場の整備に活用できた。しかしこれらはあくまで個人間のつながりから生じている物資の流れであり、これを一般化することができていないのは課題である。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>市では、ＨＰ上でこうしたニーズと提供者をマッチングさせる、カシニワ情報バンクを運営しているが、なかなかうまくいっていないと聞く。\
+こうした活動に参加している人は高齢者が中心でネットリテラシーが低い、ということも一因と考えられる。</ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>個人的なネットワークによる資材調達\
+市のHPによるマッチングの仕組みはあるがあまり活用されていない</ns0:solution>
+    <ns0:suggestion>マッチングの仕組みの改善</ns0:suggestion>
+    <ns0:title>資材調達の課題</ns0:title>
+    <ns0:type>運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/3a920215a0466e3487ec546fc3ea1f4a">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence></ns0:influence>
+    <ns0:keyword>超小型モビリティ　事故　責任問題</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>一般の人にも利用してほしいが、倫理規定としてどうかと指摘される可能性がある。\
+ナンバーを取った場合、公用車扱いになるので実証実験中に事故があったときどうするかが問題。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest>責任分担の整理や保険等の対策が必要</ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>現実的なところを考えると、大学において我々が調査に行くときに使うぐらいに利用が限定されてしまうが、まずはそこから使用したい。</ns0:solution>
+    <ns0:suggestion>責任分担の整理や保険等の対策が必要</ns0:suggestion>
+    <ns0:title>コムス利用時の事故の責任問題</ns0:title>
+    <ns0:type>運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/406627a9b47ad3ade68fe7a0c0d3d153">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/teitansonouhou"/>
+    <ns0:group>農業・緑地計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>稲作生産のほとんどを担う農家において、低炭素農法の導入を妨げる。</ns0:influence>
+    <ns0:keyword>低炭素農法　水田　</ns0:keyword>
+    <ns0:place>農業技術論であるので、全国共通である。</ns0:place>
+    <ns0:problem>低炭素農法は水を張り続けないため雑草が多い。良い米を作るために除草剤を使いたがらない農家が多く、水田での除草作業の機械化はまだできていない。農機具メーカーもそうした水田での除草作業を自動化できる器具のは未開発。\
+※市民参加による低炭素農法による稲作実施に際しては手作業で行うことが前提なので、機械化は必ずしも必須の技術ではない。ここでは低炭素農法を農業として成立させるために必要な技術的な課題について記載している。</ns0:problem>
+    <ns0:problemDiffusion>低炭素農法を市民参加による活動として実施する分には特に問題はない。\
+しかし、除草に手がかかるので、日本では低炭素農法は業としての農家には普及は難しい。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>条と条の間の除草は可能であるが、条の中での苗の位置が列毎に変化してしまうため、条の中の除草を機械化するのが困難であるため（ここで、田植え機が一回で植えることができる幅を1列と呼び（標準は４から６）、苗の列一つ一つを条と呼んだ）。</ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>農業機械メーカーさんと組んでの技術開発</ns0:solution>
+    <ns0:suggestion></ns0:suggestion>
+    <ns0:title>３。水田低炭素農法における機械技術開発（乳苗、疎植、除草、など）（橋本 －５）</ns0:title>
+    <ns0:type>技術</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/515c6ee705b0a8eee6ac6b512423e46a">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/teitansonouhou"/>
+    <ns0:group>農業・緑地計画G</ns0:group>
+    <ns0:improvement>自治体と市民の間に大学が入り、農法の効果を実証し、これを分かりやすく提示することで住民の農業参加に対するモチベーションを高めることができる。このことで住民参加の輪を広げる。\
+根回しには半年は必要であるので、次年度春の田植えの時期に向けて早めに動き出す。</ns0:improvement>
+    <ns0:influence>導入に必要な人手が確保できず、実験が行えなくなる恐れがある</ns0:influence>
+    <ns0:keyword>低炭素農法　水田　</ns0:keyword>
+    <ns0:place>市民農園への適用を中心とした場合、大都市圏の適用性が高い。</ns0:place>
+    <ns0:problem>低炭素農法は水を深くは張らないため、雑草が多く、水田での除草作業の機械化はまだできていないため、除草のために通常の農法の場合よりも多く人手を確保する必要がある。そのため、小規模であっても実証実験のためには一定の人数の参加者を集める必要がある。\
+低炭素農法への参加は、ちょい農のように頻繁に作物を持ち帰られるわけではないことや、農法自体の効果も小さいため、どの程度興味を持ってもらい、住民参加の輪を広げることができるかが課題となっている。</ns0:problem>
+    <ns0:problemDiffusion>市民に、多くの労力を使うほど面白いと思ってもらえるかどうかが課題。\
+なお、現在低炭素農法を知っている人は200人程度いるが、実際にやっている人は10人超程度と、農法自体の知名度は低い状況である。</ns0:problemDiffusion>
+    <ns0:problemInterest>強い稲ができる可能性があるという効果があるが、従来とは違う農法で新しいことをするというリスクもあるなか、知名度も低く、実施例も少ない低炭素農法について、市民参加に興味をもってもらえるか。\
+\
+</ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>デメリットである「除草作業に人手が多く必要」という点を、市民農園参加者にとっての「達成感が得られる」というメリットだととらえなおしたため、趣味で農業を行う市民農場の需要がある郊外（例・柏市）での実施が最適だと考えられる。</ns0:suggestion>
+    <ns0:title>５。水田低炭素農法の市民農園への適用性（２）要解決課題（橋本－１）</ns0:title>
+    <ns0:type>参加者</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/5fcd7691f070b8efc9937467c5bde82f">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>モビリティG</ns0:group>
+    <ns0:improvement>車両の法律上の位置づけ、取扱いの解説の実施。</ns0:improvement>
+    <ns0:influence>超小型モビリティの導入が進まない。</ns0:influence>
+    <ns0:keyword>超小型モビリティ　法制度　取扱い</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>超小型モビリティには道路運送車両の保安基準が定められ、駐車場では原付、道路上では自動車扱いとなる。\
+一時期、原付免許だけで60 kmまでスピードが出せる車両を運転することができた。しかし、事故が多発したため、普通自動車扱いとなった。\
+ただし、従来制度の適用をそのまま受けることが多い。例えば、車庫証明が不要だったり、税金が自動車より安かったりする点である。</ns0:problem>
+    <ns0:problemDiffusion>法律上の位置づけが不明確であり、必要な手続きが分かりにくい。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem>道路運送車両の保安基準等の法制度上の扱いが一般に分かりにくい。</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>手続きの明確化、その周知向上</ns0:suggestion>
+    <ns0:title>コムスの車両の法律上の扱い</ns0:title>
+    <ns0:type>制度</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/680b097809c3bb89dd49bb38389e756c">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexisyokubutui"/>
+    <ns0:group>植物医科学G</ns0:group>
+    <ns0:improvement>マイルストーンを提示しながら活動を実施していく必要があると認識した。</ns0:improvement>
+    <ns0:influence>住宅街にアンケートを配布したため、農家はほとんどおらず、趣味で植物を栽培していた人程度であり、年配の方が多く、定年後の植物栽培への関心、植物病対処法への期待が応募者が多かった要因と考えられる。男女比はやや男性が多い程度であった。</ns0:influence>
+    <ns0:keyword>植物医師　アンケート</ns0:keyword>
+    <ns0:location>柏市</ns0:location>
+    <ns0:place>園芸に興味を持つ市民を対象にする場合、大都市圏が中心と想定される</ns0:place>
+    <ns0:problem>H22年12月に市内の市街地エリアのほぼすべての住戸にポスティングアンケートを14万件配布し、7000件の回答を得た。植物病ポスターの印象が強かったことなどから、高い回答率を得られたものと考えられる。7000件中2000件が記名、100名がメールアドレスを記入していたが、H23年4月のメール案内では震災の影響もあり、2名返信にとどまったことから、2000名に対し、訓練プログラムの説明会の案内を実施したところ、100人程度の参加を見込んでいたが、1000人の応募があった。PCが使えない方も多く、実質２名の事務局に対し、FAXや電話等の連絡が大きな負担となった。</ns0:problem>
+    <ns0:problemDiffusion>参加者が多い場合、特にメール等のPCによる手段が活用できない場合の事務局負担の大きさが課題となる。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service>説明会後にアンケート（栽培経験年数、栽培面積、目的意識の明確さ等）を実施し、70人クラス2つと400人クラス2つに分けた。柏市役所農政課を窓口に会場を確保、「微生物病」「生理病」「害虫」「農薬」の４つの講義（計12時間）を実施。受講後、実習を実施。人手不足により、法政大学植物医科学研究室の学生３、４名の応援を受けた。8割くらいの出席率であった。</ns0:service>
+    <ns0:solution>説明会および講義の日程を増やして対応した。説明会では、班単位での活動が中心となることを示した。</ns0:solution>
+    <ns0:suggestion>市民園芸へのニーズが一定程度存在する地域であること。</ns0:suggestion>
+    <ns0:title>想定を上回る参加者への対応</ns0:title>
+    <ns0:type>参加者</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/73187469d41cbdb21228c4ed27d2248e">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>１年・２年の間で行うのは難しいと思われる。</ns0:influence>
+    <ns0:keyword>効果計測　社会参加　移動　超小型モビリティ</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>コムスを利用することによる移動の利便性向上を如何に評価するか、指標の設定が難しい。ちょい農に参加する人は現時点では健康なので効果がはかりづらい。</ns0:problem>
+    <ns0:problemDiffusion>コムス自体がもの珍しい。オープンキャンパスの時に来てくれた人は80万円払ってでも購入したいという人がいた。高齢者でも協力してもらえるのではないか。</ns0:problemDiffusion>
+    <ns0:problemInterest>効果測定の際の具体的な進め方について、町内会の人にお願いすると誰が手を挙げた、挙げないといったことで問題が出るので慎重にしたほうが良い。</ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>住民の方に参加を募るとなると、個人情報の問題や使い慣れていない人が存在し、説明に時間がかかる。100人単位のサンプルはうまく取れないのではないか。</ns0:problemTech>
+    <ns0:process>検証段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>適切なサンプルの抽出</ns0:suggestion>
+    <ns0:title>社会参加のための移動（コムス）の効果計測方法</ns0:title>
+    <ns0:type>検証</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/7686cac449e871798ca501fcaa3341a0">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>モビリティG</ns0:group>
+    <ns0:improvement>15分150円なら東武バスより安くなり、利用してもらえるのではないか。\
+バス停に置けば乗ってくれるのではないか。スペース問題など実現は難しそうであるが。利用者にとっての利便性を向上させないと普及しないだろう。</ns0:improvement>
+    <ns0:influence></ns0:influence>
+    <ns0:keyword>運営費用　超小型モビリティ</ns0:keyword>
+    <ns0:place>一定距離内での移動が多い大都市圏が中心</ns0:place>
+    <ns0:problem>車両1台につき30人いないとコスト的に回せない。減価償却を考えると料金設定が15分あたり300円程度となるが、これはやや高い額であるので問題である。\
+中古車でやると安くできるが、今度は整備費がかかる。\
+また、充電できる駐車場が必要。フル充電には10時間、20円～30円の電気代がかかるので誰が負担するのかも問題。コムスの電源は１００Ｖで一般住宅でも充電できるが、管理を誰がするのかが問題。</ns0:problem>
+    <ns0:problemDiffusion>コスト抑制・コスト徴収方法・役割分担の問題がある。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem>道路交通法の規制問題\
+・みだりに自動車を定置以外に配置してはいけないとされる。\
+• 利用者の乗り始める地点に車両を置くことができない。その結果、駅付近など利用者の目的地に車両が配置されることになってしまう。</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>実装段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>コスト抑制、交通結節点への配備の許容</ns0:suggestion>
+    <ns0:title>コムスの市民利用の運営費用の課題</ns0:title>
+    <ns0:type>運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/7d1dd8e1ff6fa928f4a68185d1bdfe5d">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/taiyouneturiyou"/>
+    <ns0:group>エネルギーG</ns0:group>
+    <ns0:improvement>地域に応じた手法、長期的な運営コストの抑制の明示。</ns0:improvement>
+    <ns0:influence>コスト優位な方式が適切に判断されない場合、普及が進まない。</ns0:influence>
+    <ns0:keyword>デシカント空調　エジェクタ・蒸気圧縮式空調機</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる（人口集積に応じた手法の選択）</ns0:place>
+    <ns0:problem>デシカント空調は、除湿がいらない所、すなわち人が密集していない所には利用価値が低い。その場所には、吸収式冷房とエジェクター空調が向いている。また、日本の空気はあまり乾燥していないため、デシカント空調は除湿にエネルギーがかかり、効果は弱い。</ns0:problem>
+    <ns0:problemDiffusion>湿度に応じた方式選定（デシカント/エジェクタ方式）が必要である。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>当該分野で実績・実力があるメーカーに依頼。現場で技術開発を進める際には、メーカーの助言が重要。ある程度経費が発生すれば、契約が必要。装置作成費用、設備費用などは明るい低炭素社会プロジェクトの資金を使用し、コストのみ請求しており、経費は安く抑えられている。\
+責任を持って取り組んでいただけるように、研究会を作ってメーカーと随時ミーティングを開いている。\
+成果の取り扱いについて協議するまで至っていないが、メーカーにすべて任せるのではなく、大学が主体的に進めているため問題にはならない見込みである。</ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>当該分野で実績・実力があるメーカーに実証を依頼。現場で技術開発を進める際には、メーカーの助言が重要。ある程度経費が発生すれば、契約が必要。装置作成費用、設備費用などは明るい低炭素社会プロジェクトの資金を使用し、コストのみ請求しており、経費は安く抑えられている。\
+責任を持って取り組んでいただけるように、研究会を作ってメーカーと随時ミーティングを開いている。\
+成果の取り扱いについて協議するまで至っていないが、メーカーにすべて任せるのではなく、大学が主体的に進めているため問題にはならない見込みである。</ns0:solution>
+    <ns0:suggestion>適用対象に適した方式の明確化とその周知、コスト面での効果の提示</ns0:suggestion>
+    <ns0:title>デシカント空調/エジェクタ・蒸気圧縮式空調機導入の効果</ns0:title>
+    <ns0:type>技術</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/9851630756652ac85043ce08283eb2fb">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>モビリティG</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>里山等への超小型モビリティの用途拡大が進まない。</ns0:influence>
+    <ns0:keyword>超小型モビリティ　出力</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>山コムスは馬力が足りず、坂を上れないため、モーターの出力を上げなければならない。\
+法律の定義はモーター出力だけで決まっており、現状のままだとコムスはミニカー扱いとなる。\
+出力を上げるのは技術的に大変である。また、特注品で高値となってしまう。\
+「出力」は定格出力を指すが、これは測り方次第で変わる。実質的には、本当の最大能力を下回るように測ることも可能になっている。\
+しかし、計測が大変である。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>モーターのギア比を変えられるように企業に打診しているが、今返事待ちの状態である（ギア比変更は構造的に無理だったので、コントローラーを調整する方法に切り替えた）。</ns0:solution>
+    <ns0:suggestion>里山での利用に耐えうる出力向上のための技術的改善</ns0:suggestion>
+    <ns0:title>コムスの出力向上の技術的課題</ns0:title>
+    <ns0:type>技術</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/9b9c2a49291528f81a2bc94425104c82">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName>
+      <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/baiomasurikatuyou">
+        <ns0:exTitle>バイオマス利活用</ns0:exTitle>
+        <ns0:finance>研究費</ns0:finance>
+        <ns0:organization>東大、ＮＰＯ、柏市、廃棄物処理業者</ns0:organization>
+        <ns0:purpose>NPOによる里山管理活動において生じたバイオマスを地域で有効に活用するため、廃棄物と複合的に処理して資源として活用するスキームを確立する。</ns0:purpose>
+        <ns0:sequence>里山管理活動に伴い大量のバイオマスが発生していたが、その場で使いきれないものは、一般廃棄物としてクリーンセンターで焼却処分するしかなく、有効活用されていなかった。</ns0:sequence>
+        <ns0:summary>廃棄物処理業者に協力してもらい、廃棄物系バイオマスのフローを明らかにする。その上で、フローのどの部分に里山からのバイオマスが合流できるか、他自治体のスキームも参考にしながら検討する。最終的に、柏市版のバイオマスの複合処理スキームを確立し、実際に里山からのバイオマスを一部処理する。</ns0:summary>
+      </rdf:Description>
+    </ns0:exRdfName>
+
+    <ns0:group>農業・緑地計画G</ns0:group>
+    <ns0:improvement>他自治体のバイオマス複合処理の事例を調査し、柏市への適用可能性を探る。また、廃棄物ではなく有価物扱いにすることにより、廃棄物処理法の規定を適用せずにバイオマスを処理するスキームも検討する。</ns0:improvement>
+    <ns0:influence>里山や公園緑地の管理によって発生するバイオマスを処理する際に、法制度上の問題があるため、資源化する際に支障が生じる。</ns0:influence>
+    <ns0:keyword>バイオマス処理　一般廃棄物　産業廃棄物　有価物</ns0:keyword>
+    <ns0:place>伐採材を活用する場合、大都市圏郊外～地方部に適用性が高い</ns0:place>
+    <ns0:problem>燃料チップの製造を行う産業廃棄物処理業者に対して、柏市から一般廃棄物処理業を認可してもらうことを検討したが、既存の一般廃棄物処理業者への影響が懸念され、実行に移せなかった。</ns0:problem>
+    <ns0:problemDiffusion>里山や公園緑地の管理活動によって一定量のバイオマスが発生しているが、適切な処理へつなげることができない。</ns0:problemDiffusion>
+    <ns0:problemInterest>協力事業者が一般廃棄物処理事業の許可を取れれば良いが、既存の一般廃棄物処理事業者と競合になる、また市の運営する一般廃棄物処理場の稼働率も下がるため、新たな許可が困難。</ns0:problemInterest>
+    <ns0:problemSystem>廃棄物処理業には一般廃棄物処理業と産業廃棄物処理業それぞれに許認可がされており、たとえ質が同じであったとしても、一般廃棄物として処理されているバイオマスを、産廃事業者が処理することができない。</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>同様の取組を他地域で行う場合には、取組当初より、処理業者に一般廃棄物処理業の許可が得られるような合意形成を重視する必要がある。</ns0:suggestion>
+    <ns0:title>様々なバイオマス原料の複合処理スキームの確立</ns0:title>
+    <ns0:type>制度</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/9e701cfa864c96b57022ce3e04b9d949">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName>
+      <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/seitaikeityousa">
+        <ns0:exTitle>生態系調査</ns0:exTitle>
+        <ns0:finance>研究費</ns0:finance>
+        <ns0:organization>東大、NPO、柏市</ns0:organization>
+        <ns0:purpose>自然に手を入れないことで保全される生態系もある一方人為的な管理により保全される生態系もあるため、里山管理による生態系変化をモニタリングする。</ns0:purpose>
+        <ns0:sequence>NPOが里山管理を実施している大青田地区において、植生調査や市民参加等の協働実験を開始。</ns0:sequence>
+        <ns0:summary>現状の生態系がどうなっているのかを把握し、市民の協働による里山管理を行う際に生態系保全に留意する。市民参加による里山管理の一環として生態系のモニタリングを行う手法を確立し持続多岐な里山管理のために実証実験を行っている。</ns0:summary>
+      </rdf:Description>
+    </ns0:exRdfName>
+
+    <ns0:group>農業・緑地計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence></ns0:influence>
+    <ns0:keyword>ＮＰＯ　生態系</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>現在のところなし。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>生態系調査に必要な期間、面積とそれを担う人員が必要。モニタリングを大学から市民へスムースに移行するためには、プロジェクトに関わった大学側の人間の一定期間の支援が必要。今回の結果をモデルケースとして今後展開していくために、大学側（研究者）と市民（NPO）とが連携をとり互いに足りない点を補完しあう事が重要となる。</ns0:suggestion>
+    <ns0:title>市民と大学の協働による生物相モニタリング</ns0:title>
+    <ns0:type>検証</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/9e954b3cb14a33bb97888b1b60316268">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>稼働率が低い施設利用について、経費利用の妥当性が問われる\
+たまにしか稼働していないと住民の利用意欲が低下する。</ns0:influence>
+    <ns0:keyword>稼働率</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>一年通して場所を借りて、例えば50日しか実働していないということにはしないほうが良いのではないか。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest>参加者の確保、事業の継続的な実施が課題。</ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>一定以上の稼働が可能な体制、財源確保</ns0:suggestion>
+    <ns0:title>実験場所の稼働率</ns0:title>
+    <ns0:type>その他</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/a59ed30b801f85f523ec63b57d8678f5">
+    <ns0:condition>解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement>住民は、最初は東大が答えを持っているのではないか、という先入観を持っていた。その後、自分たちのことは自分たちで考えて解決するという考えが芽生えた。</ns0:improvement>
+    <ns0:influence>コーディネーターと住民の役割分担をうまく配分することで事業が進捗</ns0:influence>
+    <ns0:keyword>役割分担</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>当初は東大がやることリストを作成し、自治会にはっぱをかけつつ、買出しや料理、音楽演奏等の手配まで行っており、１回開催すると、次の開催の企画を一休みしてから検討していたので、毎月開催することができていなかった。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　その後、実装に向けて、徐々に住民の役割分担を増やし、東大側はやることを促すという方向性に転じていき、住民側でイベント等の企画ができるようになった。　また、１か月ごとではなく、半年ごとにイベントや社会実験の計画を立てるようにしている。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>参加者のコーディネート手法</ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service>自治会が自立的に運営するようになってきているので、東大はこまめに進捗状況を確認する程度である。</ns0:service>
+    <ns0:solution>最近では、継続的に開催できるよう、同時に４か月分の企画を計画しておいて、随時開催するようにしている。</ns0:solution>
+    <ns0:suggestion>コーディネーターの能力確保</ns0:suggestion>
+    <ns0:title>コミュニティ拠点形成における住民との役割分担</ns0:title>
+    <ns0:type>運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/b421aed1b2e19774835f38fa4415dcbc">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexisyokubutui"/>
+    <ns0:group>植物医科学G</ns0:group>
+    <ns0:improvement>大学が事務局としての役割を担う。自治体はその取り組みに対して、資金や土地を提供するスポンサーとして機能する。 情報システムとしては、Facebook等の一般的なSNSサービスを利用することで、市民の情報リテラシーの差や引き継ぎにおける労力を軽減できると考えられる。</ns0:improvement>
+    <ns0:influence>プロジェクト終了後にコミュニティの取り組みを継続できない。</ns0:influence>
+    <ns0:keyword>ビジネスモデル　体制　持続可能性</ns0:keyword>
+    <ns0:place>エリアの制限はないと考えられる</ns0:place>
+    <ns0:problem>これまで東京大学がコミュニティ植物医師の事務局を担っていた。しかしプロジェクトの終了に伴い、事務局の役割を大学とは独立した組織（自治体や市民）へ移行する必要がある。その際、「事務局のキーマンの選定」、「コストや土地、リソースの集客方法等のビジネスモデルの確立」、「情報システムの活用」など、多くの課題が存在する。</ns0:problem>
+    <ns0:problemDiffusion>プロジェクトの初期段階で、形成されるコミュニティの活動におけるビジネスモデルが検討されていなかった。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>ビジネスモデルの確立と自治体との連携</ns0:suggestion>
+    <ns0:title>プロジェクト終了後の体制</ns0:title>
+    <ns0:type>運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/b6dec62d8a64ee6af9181a646965163e">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/taiyouneturiyou"/>
+    <ns0:group>エネルギーG</ns0:group>
+    <ns0:improvement>地域に応じた手法、長期的な運営コストの抑制の明示。</ns0:improvement>
+    <ns0:influence>コスト優位な方式が適切に判断されない場合、普及が進まない。</ns0:influence>
+    <ns0:keyword>吸収式冷凍機</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる（人口集積に応じた手法の選択）</ns0:place>
+    <ns0:problem>デシカント空調は、除湿がいらない所、すなわち人が密集していない所には利用価値が低い。（その場所には、吸収式冷房とエジェクター空調が向いている。）\
+イニシャルコストが割高になるため、一般消費者の利用を促すのではなく、公的施設導入を目指すのが現実的である。それでも、大学施設への実証施設の導入について、大学当局は見送りと判断した。</ns0:problem>
+    <ns0:problemDiffusion>別途都市ガスが有効利用されている所、例えば都市ガスで自家発電を行なっている事業所に導入するならば吸収式冷房が適している。\
+一般家庭に導入するにはまだ距離がある。ガス発電システムと合わせて冷房システムを考えないといけない。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>東京ガス社員宿舎での実証が進められている。</ns0:solution>
+    <ns0:suggestion>適用対象に適した方式の明確化とその周知、コスト面での効果の提示</ns0:suggestion>
+    <ns0:title>吸収式冷凍機導入の実証</ns0:title>
+    <ns0:type>参加者（事業者）</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/b8c7eaa0e7829079c3950ed8bfc98740">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/kashiniwa"/>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement>支援者側の効果計測</ns0:improvement>
+    <ns0:influence>研究をやった結果、市の支援の在り方などを具体的に提案できれば良い。</ns0:influence>
+    <ns0:keyword>効果計測　支援者</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>イベントの効果については、支援者側にもたらした効果もあるのではないか。つまり、支援する立場の人が、イベントによって高齢者の居住に関してどのような情報を得たか、でも測れるのではないか。\
+また、単純に意識の向上があった、イベントが良かった悪かった、というアンケートはあまり意味がないとの意見がある。</ns0:problem>
+    <ns0:problemDiffusion>現場で実際に問題に取り組む立場として、社会実験後も継続できる仕組みが必要。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>先日、ジェロントロジーで200人ワークショップをやった。参加者の研究への期待は相当に高い。このプロジェクトで同じことをやると無責任なことにならないか心配。\
+社会実験によって支援者側が得られる効果の計測が必要。</ns0:problemTech>
+    <ns0:process>検証段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>支援者側の効果計測、成果等の分析、ノウハウ共有</ns0:suggestion>
+    <ns0:title>コミュニティ拠点等の社会実験の支援側の効果計測</ns0:title>
+    <ns0:type>検証</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/bf1a79e25d127cbbf0e56aafd5eba7b5">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>モビリティG</ns0:group>
+    <ns0:improvement>例えば、コムスを利用したサービスを提供するベンチャー企業の設立による研究成果の継続的な社会への還元</ns0:improvement>
+    <ns0:influence>研究リソース不足による研究の遅れ、成果の低下のリスク</ns0:influence>
+    <ns0:keyword>研究リソース　共同研究　ベンチャービジネス</ns0:keyword>
+    <ns0:location></ns0:location>
+    <ns0:place>エリアの制限はないと考えられる</ns0:place>
+    <ns0:problem>学生は不確実性が高く、かつ流動性の高い研究リソースであるため、ハードウェアや研究トピックが明確になっている場合でも、研究を計画通りに遂行するには困難を伴う。</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest>実証実験から得られる成果の、研究に参加・支援する民間企業のメリットの明確化</ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>民間企業による研究実働要員の提供（システム開発やコムスの各種実験の準備など）</ns0:suggestion>
+    <ns0:title>研究における人的リソースの不確実性</ns0:title>
+    <ns0:type>運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/bf30250d1ab64dfd4078e03dd2b43ee0">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>モビリティG</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>ワイヤレス給電の導入が進まない。</ns0:influence>
+    <ns0:keyword>電波法　ワイヤレス給電</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>電波法による規制のため、ワイヤレス給電を屋外で行えない。\
+公道外や大学敷地内であっても不可である。屋内の金網で覆った所ならばよい。\
+ペースメーカーへの影響などを踏まえた結果である。磁場が漏れるとされる。その影響はあまりないといわれているが、現段階で立証はできない。\
+問題がないことは研究者が実証しないといけない。これが負担である。\
+</ns0:problem>
+    <ns0:problemDiffusion></ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem>電波法上の規制に抵触するという問題がある。\
+対策は難しく、現在は金網で覆って実験している。\
+非接触充電は、本来、接触充電よりも手軽なシステムであるが、現状は規制に対応するため金網で覆う手間がかかり、給電までに30分もかかる。</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>規制基準値を上げてもらえるように働きかけを業界が行なっている。\
+車体とコイルを近づけると漏えい電波を減らすことができるが、今後の普及を考えると（極端に近づけることは）現実的でない。コムスについては、コイルをもう近づけられないほどギャップがない状況である。\
+高周波利用設備の申請をする必要がある。車両購入者がその都度申請するのは煩雑である。そのため、法整備を変えようという意見が自動車会社含めた業界全体の協議で出ており、その進展を待っている状況である。総務省直下の部会「ブロードバンドワイヤレスフォーラム」でも法整備について議論がなされている。</ns0:solution>
+    <ns0:suggestion>ワイヤレス給電にかかる安全性の立証と制度改正</ns0:suggestion>
+    <ns0:title>ワイヤレス給電の法的規制</ns0:title>
+    <ns0:type>制度</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/c10824f23ba3d50899d27148e11946ab">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/kashiniwa"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement>NPOのような母体が市民農園のような取り組みを実施することの可能性を検討するとともに、制度改正を措置していく必要がある。</ns0:improvement>
+    <ns0:influence>普及の阻害が残る</ns0:influence>
+    <ns0:keyword>生産緑地　市民利用</ns0:keyword>
+    <ns0:place>大都市圏</ns0:place>
+    <ns0:problem>生産緑地にちょい農のような民間活動がどんどん制度的に参入できるようになると良いが、制度面での不具合があるのでなかなか進まない。場所はたくさんあるので、生産緑地の利用を通じて利用の拡大が図られる可能性があり、もったいない。\
+また、生産緑地は貸し借りが難しい。</ns0:problem>
+    <ns0:problemDiffusion>機会の拡大を通じて普及拡大に寄与する可能性がある。</ns0:problemDiffusion>
+    <ns0:problemInterest>所有者、制度運営主体（行政）との調整が課題。</ns0:problemInterest>
+    <ns0:problemSystem>時代の流れとしてはやっていきたいが、法改正がないとなかなか難しい。\
+相続税も絡んでいるかもしれない。\
+自治体によっても制度の解釈が違う。</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service>今は農業生産法人をもっている業者であれば可能なので、そのうちNPOでもできるようになれば良い。</ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>生産緑地の市民利用</ns0:suggestion>
+    <ns0:title>生産緑地の利用</ns0:title>
+    <ns0:type>制度</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/c5555a6653cfe58a4dc6987dab7a754f">
+    <ns0:condition>未解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/kashiniwa"/>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten"/>
+    <ns0:group>都市計画G</ns0:group>
+    <ns0:improvement>例えば、全体を6000人の調査として設計して、一回目の調査で3000人、二回目の調査で3000人を使うというようなやり方もありうる。</ns0:improvement>
+    <ns0:influence>既に調査をしている地域（例：豊四季等）に調査を再び行うことは難しい可能性がある。</ns0:influence>
+    <ns0:keyword>サンプリング</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>同じ地域に何度も社会調査（アンケート等）を実施する場合、特に高齢者等の属性を絞ると、同じ人が対象となってしまう。\
+昨年交通に関する調査を実施しており、住民の方に負担をかけている。</ns0:problem>
+    <ns0:problemDiffusion>地域ごとに調査案件を絞り込み、もしくは調査負荷の高さを許容するサンプルの確保が必要。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech>アンケート調査以外の計測方法の可能性検討</ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service>早めに柏市との調整が必要である。</ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion></ns0:suggestion>
+    <ns0:title>社会実験の参加者重複</ns0:title>
+    <ns0:type>参加者</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/c983791502502754b70769ac5a3139e4">
+    <ns0:condition>解決</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexisyokubutui"/>
+    <ns0:group>植物医科学G</ns0:group>
+    <ns0:improvement>これまでの試験実績と活動の成果の分析を通じて、今後の活動に必要な一定の意欲・知識レベルのふるい分けが可能となるよう、試験の難易度を設定すること等が考えられる。</ns0:improvement>
+    <ns0:influence>試験の難易度は低めに設定した。その結果、活動参加者の知識レベルの差異が生じたが、活動への支障はないように見受けられる。</ns0:influence>
+    <ns0:keyword>植物医師　認定試験</ns0:keyword>
+    <ns0:place>園芸に興味を持つ市民を対象にする場合、大都市圏が中心と想定される</ns0:place>
+    <ns0:problem>東京大学植物病院で問題を100問作成し、そのうち50問を採用した（形式は四枝択一）。講師自身が市民向けの講義に慣れているか否かによって、講師による講義レベルに差異が生じたこと、試験の難易度設定が難しかったことが課題として挙げられる。</ns0:problem>
+    <ns0:problemDiffusion>市民の参加意欲を高めつつ、参加者の一定の質を確保するための試験の難易度設定のあり方、市民向け講義の質の向上が課題となる。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>内容は、専門書の調べ方、専門家への訊き方とした。試験の難易度は低めに設定した。試験の目的は、受講者の腕試しとした。従って、試験合格は活動参加への要件ではなく、基本的には合格を前提とした。合格者には認定証を発行した。あまりにも点数の低い数名のみ不合格とした。\
+東京大学認定では支障があると予想し、日本植物医科学協会を認定主体とした。</ns0:solution>
+    <ns0:suggestion>市民園芸へのニーズが一定程度存在する地域であること。</ns0:suggestion>
+    <ns0:title>認定試験の難易度設定</ns0:title>
+    <ns0:type>運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/ce2ec1672e0cb2a1283625226579356d">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komyunitexisyokubutui"/>
+    <ns0:group>植物医科学G</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>構築したデータベースについて、民間事業者の成果もコミュニティ植物医師と共有できると効果の拡大が期待される。ただし、情報提供の範囲、費用負担等の設定が必要。</ns0:influence>
+    <ns0:keyword>植物医師　情報システム　データベース　情報提供範囲</ns0:keyword>
+    <ns0:place>園芸に興味を持つ市民を対象にする場合、大都市圏が中心と想定される</ns0:place>
+    <ns0:problem>植物病検索システムを構築し、コミュニティ植物医師に利用してもらうことを検討中。現在、7000件のレコードを蓄積している。\
+植物病院の診断サービスを利用する農業関連企業に公開している。\
+構築したデータベースをコミュニティ植物医師に公開できるか検討中。</ns0:problem>
+    <ns0:problemDiffusion>構築したデータベースをコミュニティ植物医師に公開できるか検討中（更新なし、公開先限定の方向）。\
+情報システムを携帯端末にすると対応させるべき機種が膨大となり、費用がかかる。Iphoneに絞るなど対応を検討中。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>実施段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>市民園芸へのニーズが一定程度存在する地域であること。</ns0:suggestion>
+    <ns0:title>情報システムの構築とその提供範囲の設定</ns0:title>
+    <ns0:type>運営</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/f140b30b01ecaaddc73619c6a9eb77b3">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>モビリティG</ns0:group>
+    <ns0:improvement>車両の法律上の位置づけ、取扱いの解説の実施、手続き負担の軽減。</ns0:improvement>
+    <ns0:influence>超小型モビリティの導入が進まない。</ns0:influence>
+    <ns0:keyword>超小型モビリティ　認定</ns0:keyword>
+    <ns0:place>エリアの制限はあまりないと考えられる</ns0:place>
+    <ns0:problem>超小型モビリティについては、道路運送車両の保安基準が定められ、メーカーの型式認定と似たようなことが求められる。\
+同じ型ならば、一つ認定を受けると他のものにも適用できる。\
+車両の型式認定の承認申請手続きまで研究者がやるのは負担である。\
+山コムスのように貨物用とすると、前記認定制度上は申請内容が２人乗り（乗用）とは異なることになり、手続きが煩雑となる。</ns0:problem>
+    <ns0:problemDiffusion>法律上の位置づけが不明確であり、必要な手続きが分かりにくい。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem>道路運送車両の保安基準等が定められたが、基準を分かりやすく解説することや手続き負担の軽減等が求められる。</ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>手続きの明確化、その周知向上</ns0:suggestion>
+    <ns0:title>コムスの認定手続き</ns0:title>
+    <ns0:type>制度</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/f1c1ab4f97ed326c99510cbbe6ca7a2b">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>モビリティG</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence></ns0:influence>
+    <ns0:keyword>超小型モビリティ　市民ニーズ</ns0:keyword>
+    <ns0:location>柏ビレジ近隣公園</ns0:location>
+    <ns0:place>一定距離内での移動が多い大都市圏が中心</ns0:place>
+    <ns0:problem>昨年は乗りたい人が0名だった。同意書の提出が煩雑だったからではないか。すなわち、チェック項目が複数あり、記名・捺印も必要だったためであろう。\
+なお、柏ビレジでは、実際にはまだ自動車を運転できないという人はおらず、将来的な不安はあるが問題が顕在化していない状況である。</ns0:problem>
+    <ns0:problemDiffusion>周知、関心の喚起が必要である。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution>今年は同意書を簡単にした。昨年度は医学系の同意書を流用していたが、後で読んでもらうことにした。事故を起こしたときは運転者の責任になる点などを説明するだけにとどめた。</ns0:solution>
+    <ns0:suggestion>市民の実験参加に対する負担を軽減するとともに、利用による効果を明確にしていく必要がある</ns0:suggestion>
+    <ns0:title>コムスの市民利用ニーズの課題</ns0:title>
+    <ns0:type>参加者</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/f8fcb9f677fa6af2c04b3694f21f236d">
+    <ns0:condition>対応中</ns0:condition>
+    <ns0:exRdfName rdf:resource="http://low-carbon.k.u-tokyo.ac.jp/komusu"/>
+    <ns0:group>モビリティG</ns0:group>
+    <ns0:improvement></ns0:improvement>
+    <ns0:influence>実験の適用範囲を都市部から農村部に移行する。</ns0:influence>
+    <ns0:keyword>電気自動車</ns0:keyword>
+    <ns0:place>農村部</ns0:place>
+    <ns0:problem>電気自動車は充電が必要であり、給電施設の充実が必須条件である。その際、農村部はガスに比べて電気の普及率が高い。したがって従来電気自動車は都市部向けというイメージが強かったが、本来は農村部に適した自動車である。</ns0:problem>
+    <ns0:problemDiffusion>農村部における給電施設の拡充。</ns0:problemDiffusion>
+    <ns0:problemInterest></ns0:problemInterest>
+    <ns0:problemSystem></ns0:problemSystem>
+    <ns0:problemTech></ns0:problemTech>
+    <ns0:process>準備段階</ns0:process>
+    <ns0:service></ns0:service>
+    <ns0:solution></ns0:solution>
+    <ns0:suggestion>農村部における給電施設の拡充。</ns0:suggestion>
+    <ns0:title>コムスの適用エリア</ns0:title>
+    <ns0:type>技術</ns0:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/tyoiyama">
+    <ns0:exTitle>ちょい山</ns0:exTitle>
+    <ns0:finance>研究費</ns0:finance>
+    <ns0:organization>東大、NPO、柏市</ns0:organization>
+    <ns0:purpose>市民が里山管理に空いた時間、「ちょっと」だけ参加する仕組みを構築し、里山管理参加者の裾野を広げる</ns0:purpose>
+    <ns0:sequence>都市計画グループと共同で進めている「ちょい農」の里山版として派生。</ns0:sequence>
+    <ns0:summary>一般の方に間伐等の里山管理の労働をしてもらい、薪などの報酬をその場でもらえるようにすることを通じて、新たな参加者を獲得する。</ns0:summary>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/taiyouneturiyou">
+    <ns0:exTitle>太陽熱利用</ns0:exTitle>
+    <ns0:finance>研究費</ns0:finance>
+    <ns0:organization>東大、エネルギー事業者</ns0:organization>
+    <ns0:purpose>排熱や太陽光などの未利用エネルギーを有効利用する仕組みを考案し、実用化を図る。</ns0:purpose>
+    <ns0:sequence>従来、太陽熱とその蓄熱を利用した暖房システムはあった。だが、さらに省エネを推進するためには、冷暖房合わせて考えなければならない。そこで、太陽熱を利用した吸収式冷凍機の性能を実証することとした。</ns0:sequence>
+    <ns0:summary>太陽熱利用・太陽電池ハイブリッド空調・二重効用吸収式・エジェクタ・蒸気圧縮式システム等の高効率化、制御アルゴリズムの構築を図る。</ns0:summary>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/kashiniwa">
+    <ns0:exTitle>カシニワ/ちょい農</ns0:exTitle>
+    <ns0:finance>研究費</ns0:finance>
+    <ns0:organization>東大（特任研究員１名＋技術補佐員数名）、住民参加者</ns0:organization>
+    <ns0:purpose>市民が農業に参加することで、社会参加による地域のコミュニティ形成を促し、ひいてはＣＯ２の吸収源の維持増進を図る。</ns0:purpose>
+    <ns0:sequence>新若柴町会で管理している自由広場（市のカシニワ制度を活用）において、町会の許可を得て、ちょい農のポッドを設置。</ns0:sequence>
+    <ns0:summary>東大で日常のみずやり等を実施。ポッドには、ハーブや野菜等を植え、広場周辺の住民がポッドごとに担当を決めて栽培に参加。</ns0:summary>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/teitansonouhou">
+    <ns0:exTitle>低炭素農法</ns0:exTitle>
+    <ns0:finance>研究費</ns0:finance>
+    <ns0:organization>東大、柏市</ns0:organization>
+    <ns0:purpose>水田に水を張らない乾燥農法である「低炭素農法」を、住民参加による農業の形態として日本で普及（実装）させるための実証実験を行うとともに、この効果を把握し、今後の普及・展開に向けた課題を明らかにする。</ns0:purpose>
+    <ns0:sequence>一昨年、昨年と柏市内で水田を借りて実験をしてきたが、規模を縮小し、柏市内の市民農園数か所を候補にあげ準備を進めている。なお、実験自体は大学の建物屋上で続けている。市民農園では農薬を使いたがらず、社会貢献と無農薬での収穫という利益があり、市民農園に馴染むものと考えている。</ns0:sequence>
+    <ns0:summary>柏市内で市民参加により低炭素農法による稲作を行う。</ns0:summary>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/komyunitexisyokubutui">
+    <ns0:exTitle>コミュニティ植物医師</ns0:exTitle>
+    <ns0:finance>研究費</ns0:finance>
+    <ns0:organization>東大、市内グループ</ns0:organization>
+    <ns0:purpose>植物病理学の専門家による病気の原因特定、予防方策の研究、対策検討の成果を活用し、園芸人口の増加に対応した植物医師の教育プログラムの開発、教育者の養成、植物病院の設立に向けたネットワーク構築、食のトレーサビリティシステムの充実を通じた食の安全・安心への貢献を図る。</ns0:purpose>
+    <ns0:sequence>柏市内において参加者を募り、講習を開催、試験を経て、コミュニティ植物医師の認定を実施。</ns0:sequence>
+    <ns0:summary>認定者のグループにおいて、植物病の学習、市内でのフィールドワーク等を実施。</ns0:summary>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten">
+    <ns0:exTitle>コミュニティ拠点(柏ビレジ)</ns0:exTitle>
+    <ns0:finance>研究費</ns0:finance>
+    <ns0:organization>東大特任研究員2名、柏ビレジまちづくり分科会12名</ns0:organization>
+    <ns0:purpose>高齢化が進む柏ビレジにおいて、高齢者の生きがい創出のため、社会参加と住民交流の拠点として、コミュニティカフェを創設する。</ns0:purpose>
+    <ns0:sequence>コミュニティ意識の低下に危機感を有していた柏ビレジの自治会に働きかけ、共同で空き店舗を改装し、実証実験を行う運びとなった。</ns0:sequence>
+    <ns0:summary>カフェのほか、棚を設置の上で貸出して物販を行うこと、市民教室や大人のバー、子供の遊び場の提供を行う。東大コーディネートの下、柏ビレジの住民で運営。</ns0:summary>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://low-carbon.k.u-tokyo.ac.jp/komusu">
+    <ns0:exTitle>コムス</ns0:exTitle>
+    <ns0:finance>研究費</ns0:finance>
+    <ns0:organization>東大、柏市</ns0:organization>
+    <ns0:purpose>超小型電気自動車やキャパシタ電気自動車の実用化、非接触給電等の付加価値増大やモビリティマネジメントの導入を目指す。</ns0:purpose>
+    <ns0:sequence>キャパシタ駆動の超小型電気自動車の実用化に向けた技術開発、オンデマンドバスの実証事業等が実施されてきた。</ns0:sequence>
+    <ns0:summary>さらなる付加価値向上を目指した、非接触給電、予防保全、健康管理への活用、モビリティマネジメントへの展開を図る。</ns0:summary>
+  </rdf:Description>
+
+</rdf:RDF>

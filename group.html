@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon"
+	href="assets/images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+
+	<title>社会実験概要</title>
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="assets/thirdparty/bootstrap-3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+	<link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Header -->
+	<nav class="navbar navbar-static-top navbar-inverse">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+			</button>
+			<a href="./" class="navbar-brand">明るい低炭素社会</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+		id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav" id="nav">
+			<li>
+				<a href="search.html"><span class="glyphicon glyphicon-search"></span>&nbsp;検索</a>
+			</li>
+			<li>
+				<a href="analyze.html"><span class="glyphicon glyphicon-stats"></span>&nbsp;分析</a>
+			</li>
+			<li>
+				<a href="map.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;地図検索</a>
+			</li>
+
+
+		</ul>
+
+	</div>
+</div>
+</nav>
+
+
+<div class="sm green tile" onclick="move('index.html')">
+	<span class="glyphicon glyphicon-globe"></span>&nbsp;明るい低炭素社会
+</div>
+<div class="sm light tile" id="gp"></div>
+<div class="title dense">
+	<span id="title"></span>の概要
+</div>
+
+<div class="container">
+
+	<h3>
+		社会実験「<span id="title2"></span>」の概要
+	</h3>
+
+	<table class="table table-bordered table-striped table-hover">
+		<tr>
+			<th style="width: 20%;" class="dense">社会実験名</th>
+			<td id="exTitle"></td>
+		</tr>
+		<tr>
+			<th class="dense">目的</th>
+			<td id="purpose"></td>
+		</tr>
+		<tr>
+			<th class="dense">経緯</th>
+			<td id="sequence"></td>
+		</tr>
+		<tr>
+			<th class="dense">内容</th>
+			<td id="summary"></td>
+		</tr>
+		<tr>
+			<th class="dense">体制</th>
+			<td id="organization"></td>
+		</tr>
+		<tr>
+			<th class="dense">財源</th>
+			<td id="finance"></td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<h3>関連事例</h3>
+
+	<table class="table table-bordered table-striped table-hover"
+	id="table">
+	<thead id="thead">
+		<tr>
+			<th class="dense">タイトル</th>
+			<th class="dense">フェーズ</th>
+			<th class="dense">課題の種類</th>
+			<th class="dense">キーワード</th>
+			<th class="dense">詳細</th>
+		</tr>
+	</thead>
+	<tbody id="listBody">
+	</tbody>
+</table>
+
+</div>
+
+<p style="height: 10px"></p>
+
+<div class="footer">
+	<span>&copy; 2014 <a
+		href="http://low-carbon.k.u-tokyo.ac.jp/">明るい低炭素社会の実現に向けた都市変革プログラム</a>
+		All Rights Reserved.
+	</span>
+</div>
+
+
+
+</body>
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="assets/thirdparty/bootstrap-3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="assets/js/uri.js"></script>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	//サーバへ検索
+	detail();
+
+	search();
+});
+
+var arg  = new Object;
+url = location.search.substring(1).split('&');
+
+for(i=0; url[i]; i++) {
+	var k = url[i].split('=');
+	arg[k[0]] = decodeURIComponent(k[1]);
+}
+
+var uri = arg["uri"];
+
+function detail() {
+
+	var query = getPrefixes();
+	query += " SELECT DISTINCT * ";
+	query += " WHERE { ";
+	query += " <" + uri + "> ?v ?o . ";
+	query += " } ";
+
+	$.ajax({
+		type : "POST",
+		url : 'https://dydra.com/ut-digital-archives/sedb/sparql',
+		data : {
+			query : query,
+			format : "json"
+		},
+		success : function(data) {
+			var result = data.results.bindings;
+
+			for (var i = 0; i < result.length; i++) {
+				var obj = result[i];
+				var v = obj.v.value.replace(prefixes.se, "");//LocalNameの取得
+				var o = obj.o.value;
+
+				$("#" + v).append(o);
+
+				if (v == "exTitle") {
+					$("#title").append(o);
+					$("#title2").append(o);
+				}
+			}
+		}
+	});
+}
+
+function search() {
+	var tbody = $("#listBody");
+
+	var que = getPrefixes();
+
+	que += " SELECT DISTINCT * ";
+
+	que += " WHERE { ";
+	que += " ?s se:title ?title . ";
+	que += " ?s se:process ?process . ";
+	que += " ?s se:type ?type . ";
+	que += " ?s se:keyword ?keyword . ";
+	que += " ?s se:group ?group . ";
+	que += " ?s se:exRdfName <" + uri + "> . ";
+	que += " } ";
+
+	$.ajax({
+		type : "POST",
+		url : 'https://dydra.com/ut-digital-archives/sedb/sparql',
+		data : {
+			query : que,
+			format : "json"
+		},
+		success : function(data) {
+
+			var result = data.results.bindings;
+
+			var flag = true;
+
+			for ( var i = 0; i < result.length; i++) {
+				var obj = result[i];
+
+				var tr = $("<tr>");
+				tbody.append(tr);
+
+				var td = $("<td>");
+				tr.append(td);
+				td.append(obj.title.value);
+
+				td = $("<td>");
+				tr.append(td);
+				td.append(obj.process.value);
+
+				td = $("<td>");
+				tr.append(td);
+				td.append(obj.type.value);
+
+				td = $("<td>");
+				tr.append(td);
+				td.append(obj.keyword.value);
+
+				td = $("<td>");
+				tr.append(td);
+
+				var a = $("<a>");
+				td.append(a);
+				a.attr("href", "detail.html?uri=" + obj.s.value);
+				a.attr("class", "btn dense");
+				a.append("詳細 &raquo;");
+
+				if (flag) {
+					var group = obj.group.value;
+					var div = $("#gp");
+					div
+					.attr("onclick", "move('index.html?group=" + group
+					+ "')");
+					var group2 = group.replace("G", "グループ");
+					div.append(group2);
+					flag = false;
+				}
+			}
+
+			$('#table').DataTable({
+				"iDisplayLength" : 50,
+				"order" : [ [ 1, "desc" ] ]
+			});
+		}
+	});
+}
+
+function move(data) {
+	location.href = data;
+}
+</script>
+
+</html>

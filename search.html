@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon"
+	href="assets/images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+
+	<title>検索画面</title>
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="assets/thirdparty/bootstrap-3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+	<link href="assets/css/main.css" rel="stylesheet">
+
+	<style>
+	.nav2 {
+		position: fixed;
+		bottom: 0px;
+		right: 10px;
+	}
+
+	.nav2 p:hover {
+		cursor: pointer;
+		color: black;
+	}
+
+	.nav2 p {
+		padding: 5px;
+		z-index: 99;
+	}
+</style>
+</head>
+
+<body>
+
+	<!-- Header -->
+	<nav class="navbar navbar-static-top navbar-inverse">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+			</button>
+			<a href="./" class="navbar-brand">明るい低炭素社会</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+		id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav" id="nav">
+			<li>
+				<a href="search.html"><span class="glyphicon glyphicon-search"></span>&nbsp;検索</a>
+			</li>
+			<li>
+				<a href="analyze.html"><span class="glyphicon glyphicon-stats"></span>&nbsp;分析</a>
+			</li>
+			<li>
+				<a href="map.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;地図検索</a>
+			</li>
+
+
+		</ul>
+
+	</div>
+</div>
+</nav>
+
+<div class="sm green tile" onclick="move('index.html')">
+	<span class="glyphicon glyphicon-globe"></span>&nbsp;明るい低炭素社会
+</div>
+
+<div class="nav2 open-sb">
+	<p id="pagetop" class="green">
+		<span class="glyphicon glyphicon-circle-arrow-up"></span> TOP
+	</p>
+</div>
+
+<div class="container">
+	<h3>社会実験事例データ検索</h3>
+
+
+
+	<button class="btn green" id="jQueryPush">
+		検索画面の表示&nbsp;<span class="caret"></span>
+	</button>
+
+	<div id="search" style="display: none;">
+		<br>
+		<form id="the-form">
+			<div class="well">
+				<div class="row">
+					<div class="form-group">
+						<div class="col-md-1">
+							<label for="query">検索キーワード </label>
+						</div>
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="query" />
+						</div>
+						<div class="col-md-4">
+							<input type="radio" name="textTarget" value="all" checked>全文
+							<input type="radio" name="textTarget" value="keyword">キーワードのみ
+						</div>
+					</div>
+				</div>
+
+				<br>
+
+				<div class="row">
+					<div class="form-group">
+						<div class="col-md-1">
+							<label for="group">グループ名 </label>
+						</div>
+						<div class="col-md-3" id="group"></div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-1">
+							<label for="exp">社会実験名 </label>
+						</div>
+						<div class="col-md-3" id="exp"></div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-md-1">
+							<label for="process">フェーズ</label>
+						</div>
+						<div class="col-md-3" id="process"></div>
+					</div>
+
+				</div>
+
+
+				<!-- 二行目 -->
+
+				<div class="row">
+					<div class="form-group">
+						<div class="col-md-1">
+
+							<label for="type">課題の種別 </label>
+						</div>
+						<div class="col-md-3" id="type"></div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-1">
+							<label for="condition">対応状況 </label>
+						</div>
+						<div class="col-md-3" id="condition"></div>
+					</div>
+
+					<div class="col-md-4">
+						<button type="submit" class="btn green">
+							<span class="glyphicon glyphicon-search"></span>&nbsp;検索
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- .well -->
+		</form>
+	</div>
+	<!-- #search -->
+
+	<hr>
+
+	<table class=" table table-bordered table-striped table-hover"
+	id="table">
+
+	<thead id="thead">
+		<tr class="green">
+			<th>タイトル</th>
+			<th>グループ名</th>
+			<th>社会実験名</th>
+			<th>フェーズ</th>
+			<th>課題の種類</th>
+			<th>キーワード</th>
+			<th>詳細</th>
+
+		</tr>
+	</thead>
+	<tbody id="listBody">
+	</tbody>
+</table>
+
+</div>
+
+<p style="height: 10px"></p>
+
+<div class="footer">
+	<span>&copy; 2014 <a
+		href="http://low-carbon.k.u-tokyo.ac.jp/">明るい低炭素社会の実現に向けた都市変革プログラム</a>
+		All Rights Reserved.
+	</span>
+</div>
+
+
+
+</body>
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="assets/thirdparty/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="assets/js/uri.js"></script>
+
+<script type="text/javascript">
+var lang = "en";
+
+jQuery(document).ready(function() {
+
+	//サーバへ検索
+	search("");
+
+	//検索画面の表示切替
+	$("#jQueryPush").click(function() {
+		$("#search").toggle();
+	});
+
+	getSelect();
+
+
+});
+
+function getSelect() {
+
+	var selectArray = new Object();
+	selectArray.exp = new Array();
+
+	var que = getPrefixes();
+
+	que += " SELECT DISTINCT ?v ?o ?s2 ";
+
+	que += " WHERE { ";
+	que += " { ";
+	que += " {  ?s ?v ?o . filter (?v = se:condition ) } UNION { ?s ?v ?o . filter (?v = se:group ) } UNION { ?s ?v ?o . filter (?v = se:process ) } UNION { ?s ?v ?o . filter (?v = se:type ) } ";
+	que += " } UNION { ";
+	que += " ?s2 se:exTitle ?o . ";
+	que += " } ";
+	que += " } ";
+
+	$.ajax({
+		type : "POST",
+		url : 'https://dydra.com/ut-digital-archives/sedb/sparql',
+		data : {
+			query : que
+		},
+		success : function(data) {
+			var result = data.results.bindings;
+
+			for (var i = 0; i < result.length; i++) {
+				var obj = result[i];
+
+				if (obj.v) {//その他の選択項目
+					var key = obj.v.value.replace(prefixes.se, "");
+					if (!selectArray[key]) {
+						selectArray[key] = new Array();
+
+					}
+					selectArray[key].push(obj.o.value);
+				} else {//関連する社会実験について
+					var obj2 = new Object();
+					obj2.exp = obj.o.value;
+					obj2.exRdfName = obj.s2.value;
+					selectArray["exp"].push(obj2);
+				}
+			}
+
+			$.each(selectArray, function(key, array) {
+
+				var select = $("<select>");
+				$("#" + key).append(select);
+				select.attr("class", "form-control");
+				select.attr("name", key);
+
+				var option = $("<option>");
+				select.append(option);
+				option.attr("value", "");
+				option.append("-");
+
+				for (var i = 0; i < array.length; i++) {
+					var option = $("<option>");
+					select.append(option);
+					option.attr("name", key);
+
+					if (key == "exp") {
+						option.attr("value", array[i].exp);
+						option.append(array[i].exp);
+					} else {
+						option.attr("value", array[i]);
+						option.append(array[i]);
+					}
+				}
+			});
+		}
+	});
+
+}
+
+function search(query) {
+	var tbody = $("#listBody");
+	tbody.empty();
+
+
+	var que = getPrefixes();
+
+	que += " SELECT DISTINCT * ";
+
+	//条件の指定
+	que += " WHERE {";
+	que += " ?s se:title ?title . ";
+	que += " ?s se:group ?group . ";
+	que += " ?s se:process ?process . ";
+	que += " ?s se:keyword ?keyword . ";
+	que += " ?s se:type ?type . ";
+	que += " ?s se:exRdfName ?exRdfName . ";
+	que += " ?exRdfName se:exTitle ?exp . ";
+
+	que += query;
+	que += " } ";
+
+	$.ajax({
+		type : "POST",
+		url : 'https://dydra.com/ut-digital-archives/sedb/sparql',
+		data : {
+			query : que
+		},
+		success : function(data) {
+
+
+			var result = data.results.bindings;
+
+
+			for ( var i = 0; i < result.length; i++) {
+				var obj = result[i];
+
+				var tr = $("<tr>");
+				tbody.append(tr);
+
+				var td = $("<td>");
+				tr.append(td);
+				td.append(obj.title.value);
+
+				td = $("<td>");
+				tr.append(td);
+
+				var a = $("<a>");
+				td.append(a);
+				a.attr("href", "index.html?group=" + obj.group.value);
+				a.append(obj.group.value);
+
+				td = $("<td>");
+				tr.append(td);
+
+				var a = $("<a>");
+				td.append(a);
+				a.attr("href", "group.html?uri=" + obj.exRdfName.value);
+				a.append(obj.exp.value);
+
+				td = $("<td>");
+				tr.append(td);
+				td.append(obj.process.value);
+
+				td = $("<td>");
+				tr.append(td);
+				td.append(obj.type.value);
+
+				td = $("<td>");
+				tr.append(td);
+				td.append(obj.keyword.value);
+
+				td = $("<td>");
+				tr.append(td);
+
+				var a = $("<a>");
+				td.append(a);
+				a.attr("href", "detail.html?uri=" + obj.s.value);
+				a.attr("class", "btn green");
+				a.append("詳細 &raquo;");
+			}
+
+
+			$('#table').DataTable({
+				"iDisplayLength" : 50,
+				"order" : [ [ 1, "desc" ] ]
+			});
+		}
+	});
+}
+
+jQuery(function($) {
+	$('#the-form').submit(
+		function(event) {
+			// HTMLでの送信をキャンセル
+			event.preventDefault();
+
+			// 操作対象のフォーム要素を取得
+			var $form = $(this);
+
+			// 送信ボタンを取得
+			// （後で使う: 二重送信を防止する。）
+			var $button = $form.find('button');
+
+			var param = $form.serializeArray();
+
+			var query = "";
+
+			for (var i = 0; i < param.length; i++) {
+				if (param[i].name == "textTarget") {
+					var pro = "se:keyword";
+					if (param[i].value = "all") {
+						pro = "?pro"
+					}
+					var value = param[i - 1].value;
+					if (value != "") {
+						query += " { ?s " + pro
+						+ " ?o2 . FILTER regex (?o2 , '"
+						+ value + "' , 'i' ) . } ";
+					}
+				} else if (param[i].name != "query") {
+					if (param[i].value != "") {
+
+						query += " { ?s se:" + param[i].name + " '"
+						+ decodeURI(param[i].value) + "' . } ";
+					}
+				}
+			}
+
+			$('#table').dataTable().fnDestroy();
+
+			search(query);
+
+		});
+	});
+
+	//「ページトップへ」をクリックした場合
+	$('#pagetop').click(function() {
+		// ページトップにスクロール
+		$('html,body').animate({
+			scrollTop : 0
+		}, 1000);
+		return false;
+	});
+
+	function move(data) {
+		location.href = data;
+	}
+</script>
+
+</html>

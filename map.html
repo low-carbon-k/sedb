@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon"
+	href="assets/images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+
+	<title>Map</title>
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="assets/thirdparty/bootstrap-3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+	<link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Header -->
+	<nav class="navbar navbar-static-top navbar-inverse">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+			</button>
+			<a href="./" class="navbar-brand">明るい低炭素社会</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+		id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav" id="nav">
+			<li>
+				<a href="search.html"><span class="glyphicon glyphicon-search"></span>&nbsp;検索</a>
+			</li>
+			<li>
+				<a href="analyze.html"><span class="glyphicon glyphicon-stats"></span>&nbsp;分析</a>
+			</li>
+			<li>
+				<a href="map.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;地図検索</a>
+			</li>
+
+
+		</ul>
+
+	</div>
+</div>
+</nav>
+
+<div class="sm green tile" onclick="move('index.html')">
+	<span class="glyphicon glyphicon-globe"></span>&nbsp;明るい低炭素社会
+</div>
+
+
+<div class="container">
+
+	<h3>地図検索</h3>
+
+
+	<div id="mapid" style="width: 100%; height: 600px;"></div>
+
+</div>
+
+<p style="height: 10px"></p>
+
+<div class="footer">
+	<span>&copy; 2014 <a
+		href="http://low-carbon.k.u-tokyo.ac.jp/">明るい低炭素社会の実現に向けた都市変革プログラム</a>
+		All Rights Reserved.
+	</span>
+</div>
+
+</body>
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+
+<link rel="stylesheet" href="https://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+<script src="https://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+<script src="https://leaflet.github.io/Leaflet.markercluster/example/realworld.388.js"></script>
+
+
+
+<script>
+
+var markers = L.markerClusterGroup();
+
+var mymap = L.map('mapid').setView([35.859251, 139.983061], 12);
+
+jQuery(document).ready(function() {
+
+
+
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		//maxZoom: 10,
+		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+		'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(mymap);
+
+	search();
+
+});
+
+
+
+function search() {
+	var query = "";
+	query += " PREFIX se: <" + "http://www.teitanso.org/2012/04/se#" + "> ";
+	query += " SELECT DISTINCT * ";
+	query += " WHERE { ";
+	query += " ?s se:location ?location . ";
+	query += " ?s se:title ?title . ";
+	query += " ?s se:exRdfName ?exRdfName . ";
+	query += " ?exRdfName se:exTitle ?exTitle . ";
+	query += " } ";
+
+	$.ajaxSetup({
+		async: false
+	});
+
+	$.ajax({
+		type : "POST",
+		url : 'https://dydra.com/ut-digital-archives/sedb/sparql',
+		async : false,
+		data : {
+			query : query
+		},
+		success : function(data) {
+
+			var result = data.results.bindings;
+
+			for (var i = 0; i < result.length; i++) {
+				var data = result[i];
+
+				var obj = new Object();
+				obj["location"] = data.location.value;
+				obj["title"] = data.title.value;
+				obj["exTitle"] = data.exTitle.value;
+				obj["uri"] = data.s.value;
+
+				codeAddress(obj);
+			}
+
+			mymap.addLayer(markers);
+
+			var popup = L.popup();
+
+			function onMapClick(e) {
+				popup
+				.setLatLng(e.latlng)
+				.setContent("You clicked the map at " + e.latlng.toString())
+				.openOn(mymap);
+			}
+
+			mymap.on('click', onMapClick);
+
+		}
+	});
+}
+
+function codeAddress(data) {
+	$.getJSON("https://nominatim.openstreetmap.org/search?q="+data.location+"&format=json" , function(json) {
+		if(json.length > 0){
+			var obj = json[0];
+
+			var marker = L.marker(new L.LatLng(Number(obj.lat), Number(obj.lon)), { title: data.exTitle });
+
+			var div = $("<div>");
+			div.attr("style", "width : 300px");
+
+			var media = $("<div>");
+			div.append(media);
+			media.attr("class", "media");
+
+			var left = $("<div>");
+			media.append(left);
+			left.attr("class", "pull-left");
+
+			var a = $("<a>");
+			left.append(a);
+			a.attr("href", "detail.html?uri=" + data.uri);
+
+			var img = $("<img>");
+			a.append(img);
+
+			img.attr("class", "media-object");
+			img.attr("src", "assets/images/apple-touch-icon.png");
+			img.attr("style", "width : 64px; height : 64px");
+
+			var body = $("<div>");
+			media.append(body);
+			body.attr("class", "media-body");
+
+			var h4 = $("<h4>");
+			body.append(h4);
+			h4.attr("class", "media-heading");
+			h4.append(data.title);
+
+			var a = $("<a>");
+			body.append(a);
+			a.attr("href", "detail.html?uri=" + data.uri);
+			a.append("詳細");
+
+			var contentStr = $("<div>").append(div.clone()).html();
+
+			marker.bindPopup(contentStr);
+			markers.addLayer(marker);
+
+		}
+	});
+}
+
+function move(data) {
+	location.href = data;
+}
+</script>
+
+</html>

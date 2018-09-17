@@ -1,0 +1,51 @@
+.light {
+    color : #FFF;
+    background-color : #C2CA2D !important;
+    text-align : center;
+}
+.dense {
+    color : #FFF;
+    background-color : #AFB728 !important;
+    text-align : center !important;
+}
+
+.dense2 {
+    color : #FFF;
+    background-color : #99A021 !important;
+    text-align : center !important;
+}
+
+.green {
+    color : #FFF;
+    background-color : #3EB166 !important;
+    text-align : center !important;
+}
+
+
+
+.title {
+    font-size: 24px;
+    padding : 20px !important;
+}
+
+.sm {
+    font-size: 18px;
+    padding : 10px !important;
+}
+
+.tile {
+    color : white;
+}
+
+.tile:hover {
+    cursor : pointer;
+    color : black;
+    font-style: italic;
+}
+
+.footer {
+	text-align : center;
+	background-color:#c6c6c6;
+	padding : 20px;
+}
+

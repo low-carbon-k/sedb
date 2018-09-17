@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon"
+	href="assets/images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+
+	<title>HOME</title>
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="assets/thirdparty/bootstrap-3.3.7/css/bootstrap.css">
+	<link href="assets/css/main.css" rel="stylesheet">
+
+	<style>
+	html, body, container {
+		height: 100%;
+	}
+	
+	table {
+		table-layout: fixed;
+		width: 100%;
+		height: 100%;
+	}
+
+	td {
+		text-align: center;
+		vertical-align: middel;
+	}
+
+	.gp {
+		font-size: 24px;
+	}
+
+	.bg {
+		color: white;
+		font-size: 36px;
+	}
+</style>
+
+</head>
+
+<body>
+
+	<!-- Header -->
+	<nav class="navbar navbar-static-top navbar-inverse">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+			</button>
+			<a href="./" class="navbar-brand">明るい低炭素社会</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+		id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav" id="nav">
+			<li>
+				<a href="search.html"><span class="glyphicon glyphicon-search"></span>&nbsp;検索</a>
+			</li>
+			<li>
+				<a href="analyze.html"><span class="glyphicon glyphicon-stats"></span>&nbsp;分析</a>
+			</li>
+			<li>
+				<a href="map.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;地図検索</a>
+			</li>
+
+
+		</ul>
+
+	</div>
+</div>
+</nav>
+
+
+
+<div style="height: 100%; backgroud-color: #939494">
+
+	<div id="bar"></div>
+	<table id="table"></table>
+
+	<div class="footer">
+		<span>&copy; 2014 <a
+			href="http://low-carbon.k.u-tokyo.ac.jp/">明るい低炭素社会の実現に向けた都市変革プログラム</a>
+			All Rights Reserved.
+		</span>
+	</div>
+</div>
+
+
+
+
+
+</body>
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="assets/thirdparty/bootstrap-3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+var array = new Array();
+
+jQuery(document).ready(function() {
+
+	init();
+
+	var arg  = new Object;
+	url = location.search.substring(1).split('&');
+
+	for(i=0; url[i]; i++) {
+		var k = url[i].split('=');
+		arg[k[0]] = decodeURIComponent(k[1]);
+	}
+
+	if (arg["group"]) {
+		var group = arg["group"].replace("G", "");
+		for (var i = 0; i < array.length; i++) {
+			if (array[i].title.indexOf(group) != -1) {
+				change(i);
+				break;
+			}
+		}
+	}
+
+});
+
+function init() {
+	var obj = new Object();
+	obj.title = "農業・緑地計画<br>グループ";
+	obj.groupColor = "#C2CA2D";
+	obj.fieldColor = "#AFB72B";
+	obj.caseColor = "#99A021";
+	array.push(obj);
+
+	obj = new Object();
+	obj.title = "モビリティ<br>グループ";
+	obj.groupColor = "#E39E52";
+	obj.fieldColor = "#CF904A";
+	obj.caseColor = "#B88043";
+	array.push(obj);
+
+	obj = new Object();
+	obj.title = "植物医科学<br>グループ";
+	obj.groupColor = "#E2536B";
+	obj.fieldColor = "#CC4B61";
+	obj.caseColor = "#B84357";
+	array.push(obj);
+
+	obj = new Object();
+	obj.title = "エネルギー<br>グループ";
+	obj.groupColor = "#C04F88";
+	obj.fieldColor = "#AD477B";
+	obj.caseColor = "#9C406E";
+	array.push(obj);
+
+	obj = new Object();
+	obj.title = "都市計画<br>グループ";
+	obj.groupColor = "#1F7FB1";
+	obj.fieldColor = "#1C75A1";
+	obj.caseColor = "#19668F";
+	array.push(obj);
+
+	obj = new Object();
+	obj.title = "新規登録";
+	obj.groupColor = "#939494";
+	array.push(obj);
+
+	home();
+}
+
+function home() {
+
+	console.log("home");
+
+	$("#bar").empty();
+
+	var table = $("#table");
+	table.empty();
+
+	var tr = $("<tr>");
+	table.append(tr);
+	tr.attr("class", "green");
+	tr.attr("style", "height : 30%");
+
+	var td = $("<td>");
+	tr.append(td);
+	td.attr("colspan", 3);
+
+	var img = $("<img>");
+	td.append(img);
+	img.attr("src", "assets/images/home.png");
+	img.attr("style", "max-width: 100%;");
+	img.attr("alt", "明るい低炭素社会");
+
+	for (var i = 0; i < array.length; i++) {
+
+		if (i % 3 == 0) {
+			tr = $("<tr>");
+			tr.attr("style", "height : 25%");
+		}
+
+		table.append(tr);
+
+		var td = $("<td>");
+		tr.append(td);
+		td.attr("class", "tile");
+		//td.attr("id", "hoge");
+		if (i == 5) {
+			//td.attr("onclick", "move('registration')");
+			td.attr("onclick", "alert('ご利用いただけません。')");
+		} else {
+			td.attr("onclick", "change(" + i + ")");
+		}
+
+		td.attr("style", "background-color : " + array[i].groupColor);
+
+		var span = $("<span>");
+		td.append(span);
+		span.attr("class", "gp");
+		span.append(array[i].title);
+	}
+}
+
+function change(data) {
+
+	console.log("change");
+
+	var div = $("#bar");
+	div.empty();
+	div.attr("onclick", "home()");
+	div.attr("class", "tile sm green");
+
+	var span = $("<span>");
+	div.append(span);
+	span.attr("class", "glyphicon glyphicon-globe");
+	div.append("&nbsp;明るい低炭素社会");
+
+	var obj = array[data];
+
+	var table = $("#table");
+	table.empty();
+	table.attr("style", "background-color : #939494;");
+
+	var tr = $("<tr>");
+	table.append(tr);
+	tr.attr("style", "height : 30%; background-color : " + obj.groupColor);
+
+	var td = $("<td>");
+	tr.append(td);
+	td.attr("colspan", 3);
+
+	var span = $("<span>");
+	td.append(span);
+	span.attr("class", "bg");
+	span.append(obj.title);
+
+	//Each
+	var result = search(data);
+
+	tr = $("<tr>");
+	for (var i = 0; i < result.length; i++) {
+		if (i % 3 == 0) {
+			tr = $("<tr>");
+			tr.attr("style", "height : 25%");
+			table.append(tr);
+		}
+
+		td = $("<td>");
+		tr.append(td);
+		var color = obj.fieldColor;
+		if (i % 2 != 0) {
+			color = obj.caseColor;
+		}
+
+		td.attr("class", "tile");
+		td.attr("style", "background-color : " + color);
+		td.attr("onclick", "move('group.html?uri=" + result[i].exRdfName.value
+		+ "')");
+
+		var span = $("<span>");
+		td.append(span);
+		span.attr("class", "gp");
+		span.append(result[i].title.value);
+	}
+
+	$('body,html').animate({
+		scrollTop : 0
+	}, 500);
+	return false;
+}
+
+function search(data) {
+
+	var term = array[data].title;
+	term = term.replace("<br>グループ", "G");
+
+	var query = " PREFIX se: <" + "http://www.teitanso.org/2012/04/se#" + "> ";
+	query += " SELECT DISTINCT ?title ?exRdfName ";
+	query += " WHERE { ";
+	query += " ?s se:group '" + term + "' . ";
+	query += " ?s se:exRdfName ?exRdfName . ";
+	query += " ?exRdfName se:exTitle ?title . ";
+	query += " } ";
+
+	var result = null;
+
+	$.ajax({
+		type : "POST",
+		url : "https://dydra.com/ut-digital-archives/sedb/sparql",
+		async : false,
+		data : {
+			query : query,
+			format : "json"
+		},
+		success : function(data) {
+			result = data.results.bindings;
+		}
+	});
+
+	return result;
+
+}
+
+function move(data) {
+	location.href = data;
+}
+</script>
+
+
+
+</html>

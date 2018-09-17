@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon"
+	href="assets/images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+
+	<title>分析</title>
+	
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="assets/thirdparty/bootstrap-3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+	<link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+	<!-- Header -->
+	<nav class="navbar navbar-static-top navbar-inverse">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+			</button>
+			<a href="./" class="navbar-brand">明るい低炭素社会</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+		id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav" id="nav">
+			<li>
+				<a href="search.html"><span class="glyphicon glyphicon-search"></span>&nbsp;検索</a>
+			</li>
+			<li>
+				<a href="analyze.html"><span class="glyphicon glyphicon-stats"></span>&nbsp;分析</a>
+			</li>
+			<li>
+				<a href="map.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;地図検索</a>
+			</li>
+
+
+		</ul>
+
+	</div>
+</div>
+</nav>
+
+<div class="sm green tile" onclick="move('index.html')">
+	<span class="glyphicon glyphicon-globe"></span>&nbsp;明るい低炭素社会
+</div>
+
+<div class="container">
+
+	<h3>社会実験事例データ分析</h3>
+
+	<div class="row well">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">分析対象</label>
+			<div class="col-sm-4">
+				<select id="select" class="form-control"></select>
+			</div>
+			<div class="col-sm-2">
+				<button onclick="redraw()" class="btn green">
+					<span class="glyphicon glyphicon-pencil"></span> 再描画
+				</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="chart_div" style="width: 100%; height: 500px;"></div>
+</div>
+
+<p style="height: 10px"></p>
+
+<div class="footer">
+	<span>&copy; 2014 <a
+		href="http://low-carbon.k.u-tokyo.ac.jp/">明るい低炭素社会の実現に向けた都市変革プログラム</a>
+		All Rights Reserved.
+	</span>
+</div>
+
+
+
+</body>
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="assets/thirdparty/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+
+<script type="text/javascript">
+google.load("visualization", "1", {
+	packages : [ "corechart" ]
+});
+
+jQuery(document).ready(function() {
+	//サーバへ検索
+	search();
+
+	var select = $("#select");
+	$.each(labels, function(k, v) {
+		var option = $("<option>");
+		select.append(option);
+		option.attr("value", k);
+		option.append(v);
+	});
+});
+
+var fields = new Object();
+fields.process = new Array();
+fields.condition = new Array();
+fields["type"] = new Array();
+
+var labels = new Object();
+labels.process = "フェーズ";
+labels.condition = "対応状況";
+labels["type"] = "課題の種別";
+
+var json = new Object();
+
+function search() {
+
+	var query = "";
+	query += " PREFIX se: <"+"http://www.teitanso.org/2012/04/se#"+"> ";
+	query += " SELECT DISTINCT * ";
+	query += " WHERE { ";
+	query += " ?s se:process ?process . ";
+	query += " ?s se:group ?group . ";
+	query += " ?s se:condition ?condition . ";
+	query += " ?s se:type ?type . ";
+	query += " ?s se:exRdfName ?exRdfName . ";
+	query += " ?exRdfName se:exTitle ?exTitle . ";
+	query += " } ";
+
+	$.ajax({
+		type : "POST",
+		url : 'https://dydra.com/ut-digital-archives/sedb/sparql',
+		data : {
+			query : query
+		},
+		async : false,
+		success : function(data) {
+
+			var result = data.results.bindings;
+
+			//console.log(result);
+
+			for (var i = 0; i < result.length; i++) {
+				var obj = result[i];
+
+				var group = obj.group.value;
+				if (!json[group]) {
+					json[group] = new Object();
+					$.each(fields, function(k, v) {
+						json[group][k] = new Object();
+					});
+
+				}
+
+				var gJson = json[group];
+
+				$.each(fields, function(k, v) {
+					var target = obj[k].value;
+					if (target != "") {
+						if (!gJson[k][target]) {
+							gJson[k][target] = 1;
+						} else {
+							var count = gJson[k][target];
+							gJson[k][target] = count + 1;
+						}
+
+						if (fields[k].indexOf(target) == -1) {
+							fields[k].push(target);
+						}
+					}
+
+				});
+
+			}
+
+			show("process");
+		}
+	});
+}
+
+function show(data) {
+
+	var targetArray = fields[data];
+
+	var array = new Array();
+
+	var array0 = new Array();
+
+	array.push(array0);
+	array0.push("グループ");
+	for (var i = 0; i < targetArray.length; i++) {
+		array0.push(targetArray[i]);
+	}
+
+	$.each(json, function(k, v) {
+		var groupArray = new Array();
+		array.push(groupArray);
+		groupArray.push(k);
+
+		var tmp = v[data];
+		for (var i = 0; i < targetArray.length; i++) {
+
+			if (tmp[targetArray[i]]) {
+				groupArray.push(tmp[targetArray[i]]);
+			} else {
+				groupArray.push(0);
+			}
+		}
+	});
+
+	var result = google.visualization.arrayToDataTable(array);
+
+	var options = {
+		title : "『" + labels[data] + "』に関する分析",
+		hAxis : {
+			title : array[0][0]
+		},
+		isStacked : false
+	};
+
+	var chart = new google.visualization.ColumnChart(document
+		.getElementById('chart_div'));
+
+		chart.draw(result, options);
+
+	}
+
+	function redraw() {
+		show($("#select").val());
+	}
+
+	function move(data) {
+		location.href = data;
+	}
+</script>
+</html>
