@@ -104,3 +104,19 @@ LIMIT 500 で 2 ページに分けても 751 で、途中で切れてはいな�
 - 確認（計画 4、手元の http.server + Playwright）: 一覧 41 行、グループ「コミュニティ拠点(柏ビレジ)」9 件、
   地図のピン 2 本と背景タイル表示、分析のグラフ表示、コンソールのエラー 0。
 - 残り: 計画 5（アーカイブ解除・push）は本人の確認待ち。公開後に動画を撮り直す。
+
+## 2026-10-13 語彙ファイルとフッターの LD Browser へのリンク（ブランチ vocab-footer、未コミット）
+
+- 名前空間 `http://www.teitanso.org/2012/04/se#` は https へ転送されたあと 404。元の語彙の定義は残っていない。
+- `assets/rdf/vocab.ttl` を手で書いた（116 トリプル）。data.rdf が使う属性 25 個すべてに
+  rdfs:label（ja・en）を付けた。過不足 0 は rdflib で data.rdf の述語と突き合わせて確かめた。
+  日本語名は detail.html・group.html の表の見出しから取った（見出しと値の中身が合うことも数件見た。
+  例: se:condition は「対応の結果」で値は「解決」）。英語名はこのとき付けた訳。
+  事例・社会実験に型（rdf:type）は無いので、クラスは定義していない。
+- フッター（6 ページ）: データの並びに「語彙（Turtle）」を足し、2 行目に「Linked Data として見る: LD Browser」を足した。
+  既定はデータ全体（data.ttl）を開く。事例・社会実験の画面では、`assets/js/sedb.js` がその URI を開くリンクに書き換える。
+  HTML は CRLF のまま（一度 LF に崩したので戻した）。
+- 確認（手元の http.server + Playwright）: 6 ページともリンク先が想定どおり、vocab.ttl は text/turtle で 200、エラー 0。
+  公開中の LD Browser で、data.ttl を開くと「この URI を主語とする記述はありません」と出たうえで、下に全資源が並ぶ。
+  社会実験の URI は名前付きで開く。
+- 確かめていないこと: LD Browser の側はまだ語彙を読まない（属性名は `se:condition` のまま出る）。

@@ -1,0 +1,105 @@
+@prefix se: <http://www.teitanso.org/2012/04/se#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# 社会実験事例データベース（sedb）の語彙 se: の説明。
+# 名前空間 http://www.teitanso.org/2012/04/se# は 2026-10-13 時点で 404 を返す。
+# 元の語彙の定義は残っていないので、サイトの画面の見出し（detail.html・group.html）から
+# 2026-10-13 に書き起こした。英語の名前はこのとき付けた訳。
+# 事例（se:title を持つもの）と社会実験（se:exTitle を持つもの）には型（rdf:type）が無い。
+
+<http://www.teitanso.org/2012/04/se> a owl:Ontology ;
+    rdfs:label "社会実験事例データベースの語彙"@ja , "Vocabulary of the social experiment case database"@en ;
+    rdfs:comment "画面の見出しから 2026-10-13 に書き起こした説明。元の定義は残っていない。"@ja ,
+        "Reconstructed on 2026-10-13 from the headings of the site's pages. The original definitions are lost."@en ;
+    rdfs:seeAlso <https://low-carbon-k.github.io/sedb/> ;
+    dcterms:modified "2026-10-13" .
+
+# --- 事例（38 件）の属性 ---
+
+se:title a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "タイトル"@ja , "Title"@en ;
+    rdfs:comment "事例の名前。"@ja , "Name of the case."@en .
+
+se:group a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "グループ名"@ja , "Research group"@en .
+
+se:exRdfName a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "関連する社会実験"@ja , "Related social experiment"@en ;
+    rdfs:comment "事例が属する社会実験。1 つの事例が複数の社会実験に属することがある。"@ja ,
+        "The social experiment the case belongs to. A case may belong to more than one."@en .
+
+se:process a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "フェーズ"@ja , "Phase"@en ;
+    rdfs:comment "準備段階・実施段階・検証段階など。"@ja .
+
+se:type a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "種別"@ja , "Type of issue"@en ;
+    rdfs:comment "制度・技術など、課題の種類。"@ja .
+
+se:problem a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "事象"@ja , "What happened"@en .
+
+se:problemSystem a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "国・自治体等の制度上の課題"@ja , "Institutional issue (national or local government)"@en .
+
+se:problemInterest a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "ステークホルダー間の利害調整上の課題"@ja , "Issue in coordinating stakeholders"@en .
+
+se:problemDiffusion a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "普及等にあたっての効果/課題"@ja , "Effect or issue for wider adoption"@en .
+
+se:problemTech a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "社会実験の技術的な課題"@ja , "Technical issue of the experiment"@en .
+
+se:influence a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "課題の効果影響"@ja , "Impact of the issue"@en .
+
+se:solution a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "課題発生時の対処状況"@ja , "Response when the issue arose"@en .
+
+se:service a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "その後の対応"@ja , "Follow-up"@en .
+
+se:improvement a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "取りうる対策"@ja , "Possible measures"@en .
+
+se:condition a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "対応の結果"@ja , "Outcome"@en ;
+    rdfs:comment "解決など。"@ja .
+
+se:suggestion a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "社会実験成果の適用に必要な条件"@ja , "Conditions for applying the results"@en .
+
+se:place a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "適用対象"@ja , "Where the results apply"@en .
+
+se:keyword a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "キーワード"@ja , "Keywords"@en ;
+    rdfs:comment "全角の空白で区切った語の並び。"@ja .
+
+se:location a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "場所"@ja , "Location"@en ;
+    rdfs:comment "地名。地図画面のピンに使う。"@ja .
+
+# --- 社会実験（10 件）の属性 ---
+
+se:exTitle a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "社会実験名"@ja , "Experiment name"@en .
+
+se:purpose a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "目的"@ja , "Purpose"@en .
+
+se:sequence a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "経緯"@ja , "Background"@en .
+
+se:summary a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "内容"@ja , "Description"@en .
+
+se:organization a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "体制"@ja , "Organization"@en .
+
+se:finance a rdf:Property ; rdfs:isDefinedBy <http://www.teitanso.org/2012/04/se> ;
+    rdfs:label "財源"@ja , "Funding"@en .
