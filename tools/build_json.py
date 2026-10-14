@@ -4,10 +4,10 @@
 出力:
   assets/data/cases.json        38 事例（所属する社会実験の URI と名前を展開済み）
   assets/data/experiments.json  10 社会実験（属する事例の URI を付ける）
-  assets/rdf/data.ttl           data.rdf と同じ中身の Turtle
+  assets/rdf/data.ttl           data.rdf と同じトリプルの Turtle（文字列は下のとおり整える）
 
 data.rdf は書き換えない。長文の「\\ + 改行」（元の表計算の改行が崩れたもの）は
-JSON では改行 1 つに直す。
+JSON と Turtle では改行 1 つに直す。
 """
 
 import json
@@ -33,11 +33,15 @@ CASE_FIELDS = [
 EXP_FIELDS = ["exTitle", "purpose", "sequence", "summary", "organization", "finance"]
 
 
+def clean(v):
+    return str(v).replace("\\\n", "\n").replace("\\n", "\n")
+
+
 def text(g, s, field):
     v = g.value(s, SE[field])
     if v is None:
         return ""
-    return str(v).replace("\\\n", "\n").replace("\\n", "\n")
+    return clean(v)
 
 
 def main():
@@ -73,8 +77,13 @@ def main():
         (out / f"{name}.json").write_text(
             json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
-    g.bind("se", SE)
-    g.serialize(ROOT / "assets/rdf/data.ttl", format="turtle")
+    ttl = rdflib.Graph()
+    ttl.bind("se", SE)
+    for s_, p, o in g:
+        if isinstance(o, rdflib.Literal):
+            o = rdflib.Literal(clean(o), lang=o.language, datatype=o.datatype)
+        ttl.add((s_, p, o))
+    ttl.serialize(ROOT / "assets/rdf/data.ttl", format="turtle")
 
     print(f"cases {len(cases)}, experiments {len(experiments)}, triples {len(g)}")
 
