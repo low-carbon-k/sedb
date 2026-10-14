@@ -1,0 +1,152 @@
+[
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/baiomasurikatuyou",
+  "exTitle": "バイオマス利活用",
+  "purpose": "NPOによる里山管理活動において生じたバイオマスを地域で有効に活用するため、廃棄物と複合的に処理して資源として活用するスキームを確立する。",
+  "sequence": "里山管理活動に伴い大量のバイオマスが発生していたが、その場で使いきれないものは、一般廃棄物としてクリーンセンターで焼却処分するしかなく、有効活用されていなかった。",
+  "summary": "廃棄物処理業者に協力してもらい、廃棄物系バイオマスのフローを明らかにする。その上で、フローのどの部分に里山からのバイオマスが合流できるか、他自治体のスキームも参考にしながら検討する。最終的に、柏市版のバイオマスの複合処理スキームを確立し、実際に里山からのバイオマスを一部処理する。",
+  "organization": "東大、ＮＰＯ、柏市、廃棄物処理業者",
+  "finance": "研究費",
+  "cases": [
+   "http://low-carbon.k.u-tokyo.ac.jp/9b9c2a49291528f81a2bc94425104c82"
+  ]
+ },
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/kashiniwa",
+  "exTitle": "カシニワ/ちょい農",
+  "purpose": "市民が農業に参加することで、社会参加による地域のコミュニティ形成を促し、ひいてはＣＯ２の吸収源の維持増進を図る。",
+  "sequence": "新若柴町会で管理している自由広場（市のカシニワ制度を活用）において、町会の許可を得て、ちょい農のポッドを設置。",
+  "summary": "東大で日常のみずやり等を実施。ポッドには、ハーブや野菜等を植え、広場周辺の住民がポッドごとに担当を決めて栽培に参加。",
+  "organization": "東大（特任研究員１名＋技術補佐員数名）、住民参加者",
+  "finance": "研究費",
+  "cases": [
+   "http://low-carbon.k.u-tokyo.ac.jp/256b06aacd751e0f7fe4a378e696068e",
+   "http://low-carbon.k.u-tokyo.ac.jp/37861b4f2023ea51715c9c6e61b2a714",
+   "http://low-carbon.k.u-tokyo.ac.jp/b8c7eaa0e7829079c3950ed8bfc98740",
+   "http://low-carbon.k.u-tokyo.ac.jp/c10824f23ba3d50899d27148e11946ab",
+   "http://low-carbon.k.u-tokyo.ac.jp/c5555a6653cfe58a4dc6987dab7a754f"
+  ]
+ },
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/komusu",
+  "exTitle": "コムス",
+  "purpose": "超小型電気自動車やキャパシタ電気自動車の実用化、非接触給電等の付加価値増大やモビリティマネジメントの導入を目指す。",
+  "sequence": "キャパシタ駆動の超小型電気自動車の実用化に向けた技術開発、オンデマンドバスの実証事業等が実施されてきた。",
+  "summary": "さらなる付加価値向上を目指した、非接触給電、予防保全、健康管理への活用、モビリティマネジメントへの展開を図る。",
+  "organization": "東大、柏市",
+  "finance": "研究費",
+  "cases": [
+   "http://low-carbon.k.u-tokyo.ac.jp/0fa3107623e473dee97f8f61e9df00f1",
+   "http://low-carbon.k.u-tokyo.ac.jp/3a920215a0466e3487ec546fc3ea1f4a",
+   "http://low-carbon.k.u-tokyo.ac.jp/5fcd7691f070b8efc9937467c5bde82f",
+   "http://low-carbon.k.u-tokyo.ac.jp/73187469d41cbdb21228c4ed27d2248e",
+   "http://low-carbon.k.u-tokyo.ac.jp/7686cac449e871798ca501fcaa3341a0",
+   "http://low-carbon.k.u-tokyo.ac.jp/9851630756652ac85043ce08283eb2fb",
+   "http://low-carbon.k.u-tokyo.ac.jp/bf1a79e25d127cbbf0e56aafd5eba7b5",
+   "http://low-carbon.k.u-tokyo.ac.jp/bf30250d1ab64dfd4078e03dd2b43ee0",
+   "http://low-carbon.k.u-tokyo.ac.jp/f140b30b01ecaaddc73619c6a9eb77b3",
+   "http://low-carbon.k.u-tokyo.ac.jp/f1c1ab4f97ed326c99510cbbe6ca7a2b",
+   "http://low-carbon.k.u-tokyo.ac.jp/f8fcb9f677fa6af2c04b3694f21f236d"
+  ]
+ },
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/komyunitexikyoten",
+  "exTitle": "コミュニティ拠点(柏ビレジ)",
+  "purpose": "高齢化が進む柏ビレジにおいて、高齢者の生きがい創出のため、社会参加と住民交流の拠点として、コミュニティカフェを創設する。",
+  "sequence": "コミュニティ意識の低下に危機感を有していた柏ビレジの自治会に働きかけ、共同で空き店舗を改装し、実証実験を行う運びとなった。",
+  "summary": "カフェのほか、棚を設置の上で貸出して物販を行うこと、市民教室や大人のバー、子供の遊び場の提供を行う。東大コーディネートの下、柏ビレジの住民で運営。",
+  "organization": "東大特任研究員2名、柏ビレジまちづくり分科会12名",
+  "finance": "研究費",
+  "cases": [
+   "http://low-carbon.k.u-tokyo.ac.jp/059cc1cca31ac7400e89b9d80ec880cb",
+   "http://low-carbon.k.u-tokyo.ac.jp/0c729ea56f21917ce0333e539721f5d8",
+   "http://low-carbon.k.u-tokyo.ac.jp/10a9e2ed8312d86b4518b08c49a8b481",
+   "http://low-carbon.k.u-tokyo.ac.jp/1ad1e9a908438fa0b18d446b7f33abaa",
+   "http://low-carbon.k.u-tokyo.ac.jp/256b06aacd751e0f7fe4a378e696068e",
+   "http://low-carbon.k.u-tokyo.ac.jp/9e954b3cb14a33bb97888b1b60316268",
+   "http://low-carbon.k.u-tokyo.ac.jp/a59ed30b801f85f523ec63b57d8678f5",
+   "http://low-carbon.k.u-tokyo.ac.jp/b8c7eaa0e7829079c3950ed8bfc98740",
+   "http://low-carbon.k.u-tokyo.ac.jp/c5555a6653cfe58a4dc6987dab7a754f"
+  ]
+ },
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/komyunitexisyokubutui",
+  "exTitle": "コミュニティ植物医師",
+  "purpose": "植物病理学の専門家による病気の原因特定、予防方策の研究、対策検討の成果を活用し、園芸人口の増加に対応した植物医師の教育プログラムの開発、教育者の養成、植物病院の設立に向けたネットワーク構築、食のトレーサビリティシステムの充実を通じた食の安全・安心への貢献を図る。",
+  "sequence": "柏市内において参加者を募り、講習を開催、試験を経て、コミュニティ植物医師の認定を実施。",
+  "summary": "認定者のグループにおいて、植物病の学習、市内でのフィールドワーク等を実施。",
+  "organization": "東大、市内グループ",
+  "finance": "研究費",
+  "cases": [
+   "http://low-carbon.k.u-tokyo.ac.jp/1fad304708a359557f4cd889b858f32f",
+   "http://low-carbon.k.u-tokyo.ac.jp/2957deaad62f4d6cf018e104b0a60e15",
+   "http://low-carbon.k.u-tokyo.ac.jp/680b097809c3bb89dd49bb38389e756c",
+   "http://low-carbon.k.u-tokyo.ac.jp/b421aed1b2e19774835f38fa4415dcbc",
+   "http://low-carbon.k.u-tokyo.ac.jp/c983791502502754b70769ac5a3139e4",
+   "http://low-carbon.k.u-tokyo.ac.jp/ce2ec1672e0cb2a1283625226579356d"
+  ]
+ },
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/seitaikeityousa",
+  "exTitle": "生態系調査",
+  "purpose": "自然に手を入れないことで保全される生態系もある一方人為的な管理により保全される生態系もあるため、里山管理による生態系変化をモニタリングする。",
+  "sequence": "NPOが里山管理を実施している大青田地区において、植生調査や市民参加等の協働実験を開始。",
+  "summary": "現状の生態系がどうなっているのかを把握し、市民の協働による里山管理を行う際に生態系保全に留意する。市民参加による里山管理の一環として生態系のモニタリングを行う手法を確立し持続多岐な里山管理のために実証実験を行っている。",
+  "organization": "東大、NPO、柏市",
+  "finance": "研究費",
+  "cases": [
+   "http://low-carbon.k.u-tokyo.ac.jp/9e701cfa864c96b57022ce3e04b9d949"
+  ]
+ },
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/taihi",
+  "exTitle": "有機堆肥",
+  "purpose": "単独では資源にならない有機物どうしを組み合わせることにより資源化し、有機性資源として地域で活用するスキームの基礎をつくる。",
+  "sequence": "外食系の民間企業では、生ゴミは単独では資源とならず、処理にコストをかけていた。一方里山管理団体（ＮＰＯ）は、管理時に発生する間伐材が現状では有効利用できず、焼却処理していた。",
+  "summary": "廃棄物として処理されている生ゴミと、需要がなく未利用の里山間伐材等の木質チップとを原料とした有機堆肥を製造し、最適な混合比や堆肥としての性能を明らかにする。またその際に異分野連携が必要とされるので、連携を支援する仕組みを構築、実装する。",
+  "organization": "東大、ＮＰＯ、民間企業、柏市",
+  "finance": "研究費",
+  "cases": [
+   "http://low-carbon.k.u-tokyo.ac.jp/0f4ee90a7fe7b51f326305646e643d77"
+  ]
+ },
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/taiyouneturiyou",
+  "exTitle": "太陽熱利用",
+  "purpose": "排熱や太陽光などの未利用エネルギーを有効利用する仕組みを考案し、実用化を図る。",
+  "sequence": "従来、太陽熱とその蓄熱を利用した暖房システムはあった。だが、さらに省エネを推進するためには、冷暖房合わせて考えなければならない。そこで、太陽熱を利用した吸収式冷凍機の性能を実証することとした。",
+  "summary": "太陽熱利用・太陽電池ハイブリッド空調・二重効用吸収式・エジェクタ・蒸気圧縮式システム等の高効率化、制御アルゴリズムの構築を図る。",
+  "organization": "東大、エネルギー事業者",
+  "finance": "研究費",
+  "cases": [
+   "http://low-carbon.k.u-tokyo.ac.jp/7d1dd8e1ff6fa928f4a68185d1bdfe5d",
+   "http://low-carbon.k.u-tokyo.ac.jp/b6dec62d8a64ee6af9181a646965163e"
+  ]
+ },
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/teitansonouhou",
+  "exTitle": "低炭素農法",
+  "purpose": "水田に水を張らない乾燥農法である「低炭素農法」を、住民参加による農業の形態として日本で普及（実装）させるための実証実験を行うとともに、この効果を把握し、今後の普及・展開に向けた課題を明らかにする。",
+  "sequence": "一昨年、昨年と柏市内で水田を借りて実験をしてきたが、規模を縮小し、柏市内の市民農園数か所を候補にあげ準備を進めている。なお、実験自体は大学の建物屋上で続けている。市民農園では農薬を使いたがらず、社会貢献と無農薬での収穫という利益があり、市民農園に馴染むものと考えている。",
+  "summary": "柏市内で市民参加により低炭素農法による稲作を行う。",
+  "organization": "東大、柏市",
+  "finance": "研究費",
+  "cases": [
+   "http://low-carbon.k.u-tokyo.ac.jp/09f48089ed78a7f39841e550add26bb6",
+   "http://low-carbon.k.u-tokyo.ac.jp/0c1dfea49de7e0eaf78c79ec70d88dcb",
+   "http://low-carbon.k.u-tokyo.ac.jp/2209d1c81a2df67bb5e5f22d43fc4998",
+   "http://low-carbon.k.u-tokyo.ac.jp/406627a9b47ad3ade68fe7a0c0d3d153",
+   "http://low-carbon.k.u-tokyo.ac.jp/515c6ee705b0a8eee6ac6b512423e46a"
+  ]
+ },
+ {
+  "uri": "http://low-carbon.k.u-tokyo.ac.jp/tyoiyama",
+  "exTitle": "ちょい山",
+  "purpose": "市民が里山管理に空いた時間、「ちょっと」だけ参加する仕組みを構築し、里山管理参加者の裾野を広げる",
+  "sequence": "都市計画グループと共同で進めている「ちょい農」の里山版として派生。",
+  "summary": "一般の方に間伐等の里山管理の労働をしてもらい、薪などの報酬をその場でもらえるようにすることを通じて、新たな参加者を獲得する。",
+  "organization": "東大、NPO、柏市",
+  "finance": "研究費",
+  "cases": []
+ }
+]
