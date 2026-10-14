@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="alternate" type="text/turtle" href="../assets/rdf/data.ttl">
+<script type="application/ld+json">
+{{ jsonld | safe }}
+</script>
+{% endblock %}
+{% block bars %}
+{{ super() }}
+{%- if group %}
+<a class="bar bar-sm bg-light-green" href="../?group={{ c.group | urlencode }}">{{ group.label }}グループ</a>
+{%- endif %}
+{%- if c.experiments %}
+<a class="bar bar-sm bg-dense" href="../experiment/{{ c.experiments[0].id }}.html">{{ c.experiments[0].title }}の概要</a>
+{%- endif %}
+<div class="bar bar-title bg-dense2">関連事例の詳細</div>
+{% endblock %}
+{% block main %}
+<div class="container py-3">
+  <h1 class="h3 mb-3">{{ c.title }}</h1>
+  <div class="table-responsive">
+  <table class="table table-bordered table-striped record">
+    <tbody>
+      {%- for key, label, cls in CASE_ROWS %}
+      <tr>
+        <th scope="row" class="{{ cls }}">{{ label }}</th>
+        <td>
+        {%- if key == "experiments" -%}
+          {%- for e in c.experiments %}{% if not loop.first %}<br>{% endif %}<a href="../experiment/{{ e.id }}.html">{{ e.title }}</a>{% endfor -%}
+        {%- else -%}
+          {{ c[key] | br }}
+        {%- endif -%}
+        </td>
+      </tr>
+      {%- endfor %}
+      <tr>
+        <th scope="row" class="dense2">URI</th>
+        <td class="uri">{{ c.uri }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  {%- if c.experiments %}
+  <p class="text-end"><a class="btn btn-dense2" href="../experiment/{{ c.experiments[0].id }}.html">{{ c.experiments[0].title }}の概要へ &raquo;</a></p>
+  {%- else %}
+  <p class="text-end"><a class="btn btn-dense2" href="../search.html">検索へ &raquo;</a></p>
+  {%- endif %}
+</div>
+{% endblock %}

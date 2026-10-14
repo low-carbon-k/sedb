@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block bars %}{% endblock %}
+{% block main %}
+{#- ?group=… が無いときはホーム、あるときはそのグループの社会実験を出す（JS で切り替え）。
+    JS が動かなくてもホームとリンクは働く。 -#}
+<section id="home" class="tiles-page">
+  <div class="hero bg-home"><img src="assets/images/home.png" alt="明るい低炭素社会"></div>
+  <div class="tiles">
+    {%- for g in groups %}
+    <a class="tile" style="background-color: {{ g.color }}" href="./?group={{ g.key | urlencode }}" data-group="{{ g.key }}">{{ g.label }}<br>グループ</a>
+    {%- endfor %}
+    <span class="tile tile-disabled" title="ご利用いただけません">新規登録</span>
+  </div>
+</section>
+{%- for g in groups %}
+<section class="tiles-page group-page" data-group="{{ g.key }}" hidden>
+  <a class="bar bar-sm bg-home" href="./">{{ icon('globe') }} 明るい低炭素社会</a>
+  <h2 class="group-title" style="background-color: {{ g.color }}">{{ g.label }}<br>グループ</h2>
+  <div class="tiles tiles-group">
+    {%- for e in g.experiments %}
+    <a class="tile" style="background-color: {{ g.field_color if loop.index0 is even else g.case_color }}" href="experiment/{{ e.id }}.html">{{ e.exTitle }}</a>
+    {%- endfor %}
+  </div>
+</section>
+{%- endfor %}
+{% endblock %}
+{% block scripts %}
+<script>
+// ?group=エネルギーG のときは、そのグループの面を出す（旧サイトと同じ URL）
+(function () {
+  var key = new URLSearchParams(location.search).get("group");
+  if (!key) return;
+  var page = document.querySelector('.group-page[data-group="' + CSS.escape(key) + '"]');
+  if (!page) return;
+  document.getElementById("home").hidden = true;
+  page.hidden = false;
+})();
+</script>
+{% endblock %}

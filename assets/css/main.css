@@ -1,51 +1,266 @@
-.light {
-    color : #FFF;
-    background-color : #C2CA2D !important;
-    text-align : center;
-}
-.dense {
-    color : #FFF;
-    background-color : #AFB728 !important;
-    text-align : center !important;
-}
+/* 明るい低炭素社会 社会実験事例データベース
+   色は 2014 年版のものを引き継ぐ（グループの色は tools/build_json.py の GROUPS） */
 
-.dense2 {
-    color : #FFF;
-    background-color : #99A021 !important;
-    text-align : center !important;
-}
-
-.green {
-    color : #FFF;
-    background-color : #3EB166 !important;
-    text-align : center !important;
+:root {
+  --sedb-home: #3EB166;
+  /* 本文中のリンク。サイトの緑を、白地で読める濃さまで落とした色 */
+  --bs-link-color: #24774a;
+  --bs-link-color-rgb: 36, 119, 74;
+  --bs-link-hover-color: #185634;
+  --bs-link-hover-color-rgb: 24, 86, 52;
+  --sedb-light: #C2CA2D;
+  --sedb-dense: #AFB728;
+  --sedb-dense2: #99A021;
+  --sedb-gray: #939494;
 }
 
-
-
-.title {
-    font-size: 24px;
-    padding : 20px !important;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.sm {
-    font-size: 18px;
-    padding : 10px !important;
+main {
+  flex: 1;
+}
+
+.bi {
+  vertical-align: -0.125em;
+}
+
+/* 画面上部の色帯（パンくず） */
+.bar {
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.bar-sm {
+  font-size: 1.125rem;
+  padding: 10px;
+}
+
+.bar-title {
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+/* 押せる色帯とタイル: 文字は白のまま、背景を少し暗くする（背景色は style 属性にあるので影で重ねる） */
+a.bar,
+a.tile {
+  transition: box-shadow 0.15s ease-in-out;
+}
+a.bar:hover,
+a.tile:hover {
+  color: #fff;
+  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.14);
+}
+a.bar:focus-visible,
+a.tile:focus-visible {
+  color: #fff;
+  outline: 3px solid #fff;
+  outline-offset: -6px;
+  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.14);
+}
+@media (prefers-reduced-motion: reduce) {
+  a.bar,
+  a.tile {
+    transition: none;
+  }
+}
+
+.bg-home { background-color: var(--sedb-home); }
+.bg-light-green { background-color: var(--sedb-light); }
+.bg-dense { background-color: var(--sedb-dense); }
+.bg-dense2 { background-color: var(--sedb-dense2); }
+
+.btn-home,
+.btn-dense,
+.btn-dense2 {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-border-color: transparent;
+}
+.btn-home { --bs-btn-bg: var(--sedb-home); --bs-btn-hover-bg: #34965a; --bs-btn-active-bg: #34965a; }
+.btn-dense { --bs-btn-bg: var(--sedb-dense); --bs-btn-hover-bg: #959c22; --bs-btn-active-bg: #959c22; }
+.btn-dense2 { --bs-btn-bg: var(--sedb-dense2); --bs-btn-hover-bg: #82881c; --bs-btn-active-bg: #82881c; }
+
+/* 表の見出しの色 */
+.table th.dense,
+.table th.dense2,
+.table tr.green th {
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+.table th.dense { --bs-table-bg-type: var(--sedb-dense); --bs-table-bg-state: var(--sedb-dense); background-color: var(--sedb-dense); }
+.table th.dense2 { --bs-table-bg-type: var(--sedb-dense2); --bs-table-bg-state: var(--sedb-dense2); background-color: var(--sedb-dense2); }
+.table tr.green th { --bs-table-bg-type: var(--sedb-home); --bs-table-bg-state: var(--sedb-home); background-color: var(--sedb-home); }
+
+.record th {
+  width: 30%;
+}
+
+.record td,
+.list td {
+  overflow-wrap: anywhere;
+}
+
+.uri {
+  font-family: var(--bs-font-monospace);
+  font-size: 0.875em;
+}
+
+/* 並べ替えの見出し */
+button.sort {
+  all: unset;
+  cursor: pointer;
+  width: 100%;
+}
+button.sort:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+/* 押すと並べ替えられることが分かるよう、⇅ を薄く出しておく */
+button.sort::after {
+  content: " ⇅";
+  opacity: 0.55;
+}
+button.sort:hover::after,
+button.sort:focus-visible::after {
+  opacity: 1;
+}
+th[aria-sort="ascending"] button.sort::after { content: " ▲"; opacity: 1; }
+th[aria-sort="descending"] button.sort::after { content: " ▼"; opacity: 1; }
+
+.search-form {
+  background-color: var(--bs-tertiary-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+}
+
+.pagetop {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+/* 少しスクロールするまで出さない（search.js が付け外しする） */
+.pagetop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* 一覧の行: 行のどこを押しても詳細へ（rowlink.js） */
+tr[data-href] {
+  cursor: pointer;
+}
+
+/* トップのタイル */
+.tiles-page {
+  background-color: var(--sedb-gray);
+}
+
+.hero {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.group-title {
+  color: #fff;
+  font-size: 2.25rem;
+  text-align: center;
+  padding: 48px 16px;
+  margin: 0;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .tile {
-    color : white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25vh;
+  padding: 16px;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
 }
 
-.tile:hover {
-    cursor : pointer;
-    color : black;
-    font-style: italic;
+.tile-disabled {
+  background-color: var(--sedb-gray);
+  opacity: 0.8;
+  cursor: not-allowed;
 }
 
-.footer {
-	text-align : center;
-	background-color:#c6c6c6;
-	padding : 20px;
+@media (max-width: 575.98px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* 奇数枚のとき、最後の 1 枚を横いっぱいにして右下の空きを埋める */
+  .tiles .tile:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+  .tile {
+    min-height: 120px;
+    font-size: 1.125rem;
+  }
+  .group-title {
+    font-size: 1.5rem;
+    padding: 32px 16px;
+  }
+  .record th {
+    width: 35%;
+  }
 }
 
+.map {
+  width: 100%;
+  height: 600px;
+  max-height: 70vh;
+}
+
+.map-popup {
+  display: flex;
+  gap: 8px;
+  width: 260px;
+  max-width: 70vw;
+}
+
+.chart {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  max-height: 70vh;
+}
+
+.site-footer {
+  text-align: center;
+  background-color: #c6c6c6;
+  padding: 20px 16px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* 灰色の地では本文の緑だと薄いので、一段濃くする */
+.site-footer a {
+  color: var(--bs-link-hover-color);
+}
+
+.list th {
+  white-space: nowrap;
+}

@@ -1,66 +1,44 @@
-// データの読み込み。以前は dydra の SPARQL に問い合わせていたが、
-// 今は tools/build_json.py が data.rdf から作った JSON を読む。
+// 検索・地図・分析の画面が共通で使う読み込み。
+// データは tools/build_json.py が data.rdf から作った JSON（以前は dydra の SPARQL に問い合わせていた）。
 
 var SEDB = {};
 
-SEDB.load = function() {
-	return $.when(
-		$.getJSON("assets/data/cases.json"),
-		$.getJSON("assets/data/experiments.json")
-	).then(function(c, e) {
-		var data = {
-			cases : c[0],
-			experiments : e[0],
-			caseByUri : {},
-			expByUri : {}
-		};
-		$.each(data.cases, function(i, obj) {
-			data.caseByUri[obj.uri] = obj;
-		});
-		$.each(data.experiments, function(i, obj) {
-			data.expByUri[obj.uri] = obj;
-		});
-		return data;
-	});
+SEDB.load = function () {
+  return Promise.all([
+    fetch("assets/data/cases.json").then(function (r) { return r.json(); }),
+    fetch("assets/data/experiments.json").then(function (r) { return r.json(); })
+  ]).then(function (res) {
+    return { cases: res[0], experiments: res[1] };
+  });
 };
 
 // 事例 × 所属する社会実験 の行に展開する（1 事例が複数の実験に属することがある）
-SEDB.rows = function(data) {
-	var rows = [];
-	$.each(data.cases, function(i, c) {
-		$.each(c.experiments, function(j, e) {
-			rows.push({ c : c, exp : e });
-		});
-	});
-	return rows;
+SEDB.rows = function (data) {
+  var rows = [];
+  data.cases.forEach(function (c) {
+    c.experiments.forEach(function (e) {
+      rows.push({ c: c, exp: e });
+    });
+  });
+  return rows;
 };
 
-SEDB.param = function(name) {
-	var url = location.search.substring(1).split('&');
-	for (var i = 0; url[i]; i++) {
-		var k = url[i].split('=');
-		if (k[0] == name) {
-			return decodeURIComponent(k[1]);
-		}
-	}
-	return null;
+SEDB.caseHref = function (c) {
+  return "case/" + c.id + ".html";
 };
 
-SEDB.escape = function(s) {
-	return $("<div>").text(s).html();
+SEDB.expHref = function (e) {
+  return "experiment/" + e.id + ".html";
 };
 
-// 文字列をエスケープし、改行を <br> にする
-SEDB.html = function(s) {
-	return SEDB.escape(s).replace(/\n/g, "<br>");
+// 要素を作る。text は文字として入れる（HTML として解釈しない）
+SEDB.el = function (tag, attrs, text) {
+  var el = document.createElement(tag);
+  Object.keys(attrs || {}).forEach(function (k) {
+    el.setAttribute(k, attrs[k]);
+  });
+  if (text !== undefined) {
+    el.textContent = text;
+  }
+  return el;
 };
-
-// フッターの「LD Browser で見る」。事例・社会実験の画面では、その URI を開くようにする。
-// 既定（他の画面）はデータ全体の Turtle を開く。
-SEDB.LD_BROWSER = "https://browser.ldas.jp/?u=";
-$(function() {
-	var uri = SEDB.param("uri");
-	if (uri && /^http:\/\/low-carbon\.k\.u-tokyo\.ac\.jp\/[^\/#?]+$/.test(uri)) {
-		$("#ldbrowser").attr("href", SEDB.LD_BROWSER + encodeURIComponent(uri));
-	}
-});
