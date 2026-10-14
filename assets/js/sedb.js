@@ -54,3 +54,13 @@ SEDB.escape = function(s) {
 SEDB.html = function(s) {
 	return SEDB.escape(s).replace(/\n/g, "<br>");
 };
+
+// フッターの「LD Browser で見る」。事例・社会実験の画面では、その URI を開くようにする。
+// 既定（他の画面）はデータ全体の Turtle を開く。
+SEDB.LD_BROWSER = "https://browser.ldas.jp/?u=";
+$(function() {
+	var uri = SEDB.param("uri");
+	if (uri && /^http:\/\/low-carbon\.k\.u-tokyo\.ac\.jp\/[^\/#?]+$/.test(uri)) {
+		$("#ldbrowser").attr("href", SEDB.LD_BROWSER + encodeURIComponent(uri));
+	}
+});
