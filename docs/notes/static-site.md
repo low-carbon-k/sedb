@@ -128,3 +128,55 @@ LIMIT 500 で 2 ページに分けても 751 で、途中で切れてはいな�
   上の「出力に `\` は 0 個」は JSON だけを見た結果で、Turtle は data.rdf の文字列をそのまま書き出していた。
 - build_json.py で、Turtle を書く前に文字列を JSON と同じ規則で整えるようにした。
   トリプル数は 750 のまま、「\」は 0 個、JSON は変化なし。data.rdf は今も書き換えていない。
+
+## 2026-10-14 モダン化の計画（ブランチ modernize、ttl-backslash＝PR #3 の上に積む）
+
+本人の依頼: ソースのリファクタリング・モダン化。配り方は今のまま（master 直下を Pages、Actions なし）。
+動画は改修後に全章撮り直す（いま撮ってある 2026-10-13 版はアップロードしない）。
+
+### 今の問題
+
+- 6 ページがナビ・フッターを 1 枚ずつ複写している（フッターを変えるたびに 6 か所直した）。
+- jQuery 3.3.1・Bootstrap 3.3.7（2019 年で保守終了）・DataTables 1.10.15（`//cdn.datatables.net` を版の固定と SRI なしで読む）。
+- 事例・社会実験の画面（detail.html?uri=…、group.html?uri=…）は JS が JSON を読んで中身を差し込む。
+  JS を動かさない読み手（検索エンジン、LD を集めるクローラ）には中身が空のページに見える。
+- 事例の URI（`http://low-carbon.k.u-tokyo.ac.jp/<md5>`）はもう応答しない。URI から記述にたどり着く道が、このサイトの中にしか無い。
+
+### 方針
+
+1. **ページは build で作る。** `tools/build_json.py` が JSON・Turtle に加えて HTML も書き出す。
+   ひな形は `tools/templates/`（Jinja2。共通の枠 `base.html` にナビとフッターを 1 回だけ書く）。
+   出力はリポジトリ直下にコミットする（Actions を使わないので、生成物もコミットが要る）。
+2. **事例・社会実験ごとの静的ページ。** `case/<URI の末尾>.html`（38）と `experiment/<URI の末尾>.html`（10）。
+   - 中身は HTML に最初から書き込む（JS 不要）。
+   - `<script type="application/ld+json">` にその資源の記述を JSON-LD で埋め込む。
+     語は data.rdf と同じ se: をそのまま使い（`@context` に se の名前空間）、URI も元のまま。
+     schema.org への読み替えは今回はしない（元データの語彙を勝手に足さない）。
+   - `<link rel="alternate" type="text/turtle" href="../assets/rdf/data.ttl">` を置く。
+3. **古い URL は残す。** detail.html?uri=… と group.html?uri=… は、URI の末尾を取って静的ページへ
+   移す小さなページにする（動画・外部からのリンクを壊さない）。
+4. **ライブラリ。** jQuery と DataTables はやめて素の JS。Bootstrap は 5.3.3 を
+   assets/thirdparty に置く（今の 3.3.7 と同じく手元に置き、外の CDN に頼らない）。
+   glyphicon は使えなくなるので、使っている 5 つだけ SVG を直接書く。
+   Leaflet 1.3.1 → 1.9.4、markercluster 1.5.3（版を固定、SRI 付き）。Chart.js 4.4.1 はそのまま。
+5. **一覧（search）。** 表の並べ替えは見出しを押すと切り替わる程度を素の JS で書く。
+   41 行なのでページ送りは要らない。絞り込みの条件を URL（`?q=…&exp=…`）に載せ、
+   検索結果に直接リンクできるようにする。
+6. **見た目。** グループの色（農業・緑地計画 #C2CA2D ほか）とトップのタイルは残す。
+   表は Bootstrap 5 の標準に寄せる。スマートフォン幅で横にはみ出さないこと。
+7. 行末: 生成する HTML は LF にする（今の CRLF は全部書き直すので差分は同じ）。`.nojekyll` を置く
+   （Pages は legacy build＝Jekyll を通している。2026-10-14 に API で確認）。
+
+### 確認のしかた
+
+- 手元の http.server + Playwright で: 全 6 画面 + 静的ページ 48 枚でコンソールのエラー 0、
+  外部への要求は OSM タイル・cdnjs/unpkg だけ。
+- 前の版と数を突き合わせる: 一覧 41 行、コムス 11 件、「大学」全文 11 / キーワードのみ 1、
+  グループ「コミュニティ拠点(柏ビレジ)」9 件、地図のピン 2。
+- JSON-LD を rdflib で読み直し、静的ページ 48 枚の分を合わせると data.ttl と同じトリプルになること。
+- 旧 URL（detail.html?uri=… / group.html?uri=…）が静的ページへ移ること。
+- 幅 375px で横スクロールが出ないこと。
+
+### 決めていないこと（本人に聞く）
+
+- © 2014 の表記と、フッターのプロジェクト名はそのまま残す（変えるなら本人の判断）。
