@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container py-3">
+  <h1 class="h3 mb-3">社会実験事例データ分析</h1>
+  <div class="row g-2 align-items-center search-form p-3 mb-3 mx-0">
+    <div class="col-sm-2"><label class="col-form-label" for="field">分析対象</label></div>
+    <div class="col-sm-4">
+      <select id="field" class="form-select">
+        {%- for key, label in ANALYZE_FIELDS %}
+        <option value="{{ key }}">{{ label }}</option>
+        {%- endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="chart"><canvas id="chart" role="img" aria-label="グループごとの事例数のグラフ"></canvas></div>
+  <p class="mt-2 small text-body-secondary">事例 1 件を 1 と数えています（2 つの社会実験に属する事例も 1 回）。空欄の事例は数えていません。</p>
+  <div class="table-responsive">
+    <table class="table table-sm table-bordered" id="counts"></table>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/js/sedb.js"></script>
+<script src="assets/js/analyze.js"></script>
+{% endblock %}

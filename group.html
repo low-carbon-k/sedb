@@ -1,222 +1,64 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ja">
 <head>
-	<meta charset="utf-8">
-	<meta name=viewport content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon"
-	href="assets/images/apple-touch-icon.png">
-	<link rel="shortcut icon" href="assets/images/favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>明るい低炭素社会 社会実験事例データベース</title>
+<meta name="description" content="明るい低炭素社会の実現に向けた都市変革プログラムの社会実験（10 件）と、その事例（38 件）のデータベース。">
+<link rel="icon" href="assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/thirdparty/bootstrap-5.3.3/css/bootstrap.min.css">
 
-
-	<title>社会実験概要</title>
-
-
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="assets/thirdparty/bootstrap-3.3.7/css/bootstrap.css">
-	<link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-	<link href="assets/css/main.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-	<!-- Header -->
-	<nav class="navbar navbar-static-top navbar-inverse">
-		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span> <span
-				class="icon-bar"></span> <span class="icon-bar"></span> <span
-				class="icon-bar"></span>
-			</button>
-			<a href="./" class="navbar-brand">明るい低炭素社会</a>
-		</div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse"
-		id="bs-example-navbar-collapse-1">
-		<ul class="nav navbar-nav" id="nav">
-			<li>
-				<a href="search.html"><span class="glyphicon glyphicon-search"></span>&nbsp;検索</a>
-			</li>
-			<li>
-				<a href="analyze.html"><span class="glyphicon glyphicon-stats"></span>&nbsp;分析</a>
-			</li>
-			<li>
-				<a href="map.html"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;地図検索</a>
-			</li>
-
-
-		</ul>
-
-	</div>
-</div>
-</nav>
-
-
-<div class="sm green tile" onclick="move('index.html')">
-	<span class="glyphicon glyphicon-globe"></span>&nbsp;明るい低炭素社会
-</div>
-<div class="sm light tile" id="gp"></div>
-<div class="title dense">
-	<span id="title"></span>の概要
-</div>
-
-<div class="container">
-
-	<h3>
-		社会実験「<span id="title2"></span>」の概要
-	</h3>
-
-	<table class="table table-bordered table-striped table-hover">
-		<tr>
-			<th style="width: 20%;" class="dense">社会実験名</th>
-			<td id="exTitle"></td>
-		</tr>
-		<tr>
-			<th class="dense">目的</th>
-			<td id="purpose"></td>
-		</tr>
-		<tr>
-			<th class="dense">経緯</th>
-			<td id="sequence"></td>
-		</tr>
-		<tr>
-			<th class="dense">内容</th>
-			<td id="summary"></td>
-		</tr>
-		<tr>
-			<th class="dense">体制</th>
-			<td id="organization"></td>
-		</tr>
-		<tr>
-			<th class="dense">財源</th>
-			<td id="finance"></td>
-		</tr>
-	</table>
-
-	<hr>
-
-	<h3>関連事例</h3>
-
-	<table class="table table-bordered table-striped table-hover"
-	id="table">
-	<thead id="thead">
-		<tr>
-			<th class="dense">タイトル</th>
-			<th class="dense">フェーズ</th>
-			<th class="dense">課題の種類</th>
-			<th class="dense">キーワード</th>
-			<th class="dense">詳細</th>
-		</tr>
-	</thead>
-	<tbody id="listBody">
-	</tbody>
-</table>
-
-</div>
-
-<p style="height: 10px"></p>
-
-<div class="footer">
-	<span>&copy; 2014 明るい低炭素社会の実現に向けた都市変革プログラム All Rights Reserved.</span>
-		<br>
-		<span>データ: <a href="assets/rdf/data.rdf">RDF/XML</a> | <a href="assets/rdf/data.ttl">Turtle</a> | <a href="assets/data/cases.json">JSON（事例）</a> | <a href="assets/data/experiments.json">JSON（社会実験）</a> | <a href="assets/rdf/vocab.ttl">語彙（Turtle）</a></span>
-		<br>
-		<span>Linked Data として見る: <a id="ldbrowser" href="https://browser.ldas.jp/?u=https%3A%2F%2Flow-carbon-k.github.io%2Fsedb%2Fassets%2Frdf%2Fdata.ttl">LD Browser</a></span>
-</div>
-
-
-
-</body>
-
-<script
-src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="assets/thirdparty/bootstrap-3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-
-
-<script type="text/javascript" src="assets/js/sedb.js"></script>
-
-<script type="text/javascript">
-jQuery(document).ready(function() {
-	SEDB.load().then(function(data) {
-		detail(data);
-		search(data);
-	});
-});
-
-var uri = SEDB.param("uri");
-
-function detail(data) {
-
-	var exp = data.expByUri[uri];
-	if (!exp) {
-		return;
-	}
-
-	$.each(["exTitle", "purpose", "sequence", "summary", "organization", "finance"], function(i, v) {
-		$("#" + v).append(SEDB.html(exp[v]));
-	});
-
-	$("#title").text(exp.exTitle);
-	$("#title2").text(exp.exTitle);
-}
-
-function search(data) {
-	var tbody = $("#listBody");
-
-	var flag = true;
-
-	$.each(SEDB.rows(data), function(i, row) {
-		if (row.exp.uri != uri) {
-			return;
-		}
-		var obj = row.c;
-
-		var tr = $("<tr>");
-		tbody.append(tr);
-
-		$.each(["title", "process", "type", "keyword"], function(j, v) {
-			$("<td>").text(obj[v]).appendTo(tr);
-		});
-
-		var td = $("<td>");
-		tr.append(td);
-
-		var a = $("<a>");
-		td.append(a);
-		a.attr("href", "detail.html?uri=" + obj.uri);
-		a.attr("class", "btn dense");
-		a.append("詳細 &raquo;");
-
-		if (flag) {
-			var group = obj.group;
-			var div = $("#gp");
-			div
-			.attr("onclick", "move('index.html?group=" + group
-			+ "')");
-			var group2 = group.replace("G", "グループ");
-			div.append(group2);
-			flag = false;
-		}
-	});
-
-	$('#table').DataTable({
-		"iDisplayLength" : 50,
-		"order" : [ [ 1, "desc" ] ]
-	});
-}
-
-function move(data) {
-	location.href = data;
-}
+<meta name="robots" content="noindex">
+<script>
+// 旧 URL（group.html?uri=http://low-carbon.k.u-tokyo.ac.jp/<id>）を、静的ページ experiment/<id>.html へ移す
+(function () {
+  var uri = new URLSearchParams(location.search).get("uri") || "";
+  var m = uri.match(/^http:\/\/low-carbon\.k\.u-tokyo\.ac\.jp\/([A-Za-z0-9_-]+)$/);
+  if (m) location.replace("experiment/" + m[1] + ".html");
+})();
 </script>
 
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="./">明るい低炭素社会</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="メニュー">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="search.html"><svg class="bi" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg> 検索</a></li>
+        <li class="nav-item"><a class="nav-link" href="analyze.html"><svg class="bi" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/></svg> 分析</a></li>
+        <li class="nav-item"><a class="nav-link" href="map.html"><svg class="bi" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg> 地図検索</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<a class="bar bar-sm bg-home" href="./"><svg class="bi" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/></svg> 明るい低炭素社会</a>
+
+<main>
+
+<div class="container py-3">
+  <p>このページは移動しました。社会実験の一覧は <a href="./">トップページ</a> から開けます。</p>
+</div>
+
+</main>
+<footer class="site-footer">
+  <p>&copy; 2014 明るい低炭素社会の実現に向けた都市変革プログラム All Rights Reserved.</p>
+  <p>データ:
+    <a href="assets/rdf/data.rdf">RDF/XML</a> |
+    <a href="assets/rdf/data.ttl">Turtle</a> |
+    <a href="assets/data/cases.json">JSON（事例）</a> |
+    <a href="assets/data/experiments.json">JSON（社会実験）</a> |
+    <a href="assets/rdf/vocab.ttl">語彙（Turtle）</a></p>
+  <p>Linked Data として見る: <a id="ldbrowser" href="https://browser.ldas.jp/?u=https%3A%2F%2Flow-carbon-k.github.io%2Fsedb%2Fassets%2Frdf%2Fdata.ttl">LD Browser</a></p>
+</footer>
+<script src="assets/thirdparty/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/rowlink.js"></script>
+
+</body>
 </html>

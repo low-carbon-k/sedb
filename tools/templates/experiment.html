@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="alternate" type="text/turtle" href="../assets/rdf/data.ttl">
+<script type="application/ld+json">
+{{ jsonld | safe }}
+</script>
+{% endblock %}
+{% block bars %}
+{{ super() }}
+{%- if group %}
+<a class="bar bar-sm bg-light-green" href="../?group={{ group.key | urlencode }}">{{ group.label }}グループ</a>
+{%- endif %}
+<div class="bar bar-title bg-dense">{{ e.exTitle }}の概要</div>
+{% endblock %}
+{% block main %}
+<div class="container py-3">
+  <h1 class="h3 mb-3">社会実験「{{ e.exTitle }}」の概要</h1>
+  <div class="table-responsive">
+  <table class="table table-bordered table-striped record">
+    <tbody>
+      {%- for key, label in EXP_ROWS %}
+      <tr>
+        <th scope="row" class="dense">{{ label }}</th>
+        <td>{{ e[key] | br }}</td>
+      </tr>
+      {%- endfor %}
+      <tr>
+        <th scope="row" class="dense">URI</th>
+        <td class="uri">{{ e.uri }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <hr>
+  <h2 class="h3 mb-3">関連事例 <small class="text-body-secondary fs-6">{{ cases | length }} 件</small></h2>
+  {%- if cases %}
+  <div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover list">
+    <thead>
+      <tr>
+        <th class="dense">タイトル</th>
+        <th class="dense">フェーズ</th>
+        <th class="dense">課題の種類</th>
+        <th class="dense">キーワード</th>
+        <th class="dense">詳細</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for c in cases %}
+      <tr data-href="../case/{{ c.id }}.html">
+        <td><a href="../case/{{ c.id }}.html">{{ c.title }}</a></td>
+        <td>{{ c.process }}</td>
+        <td>{{ c.type }}</td>
+        <td>{{ c.keyword }}</td>
+        <td><a class="btn btn-dense btn-sm text-nowrap" href="../case/{{ c.id }}.html">詳細 &raquo;</a></td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  </div>
+  {%- else %}
+  <p>この社会実験に結びついた事例はありません。</p>
+  {%- endif %}
+</div>
+{% endblock %}

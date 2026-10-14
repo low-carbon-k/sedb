@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block head %}
+<meta name="robots" content="noindex">
+<script>
+// 旧 URL（{{ old }}.html?uri=http://low-carbon.k.u-tokyo.ac.jp/<id>）を、静的ページ {{ dir }}/<id>.html へ移す
+(function () {
+  var uri = new URLSearchParams(location.search).get("uri") || "";
+  var m = uri.match(/^http:\/\/low-carbon\.k\.u-tokyo\.ac\.jp\/([A-Za-z0-9_-]+)$/);
+  if (m) location.replace("{{ dir }}/" + m[1] + ".html");
+})();
+</script>
+{% endblock %}
+{% block main %}
+<div class="container py-3">
+  <p>このページは移動しました。{{ what }}の一覧は <a href="{{ list_href }}">{{ list_label }}</a> から開けます。</p>
+</div>
+{% endblock %}

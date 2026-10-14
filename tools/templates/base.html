@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page_title %}{{ page_title }} | {% endif %}{{ SITE }}</title>
+<meta name="description" content="{{ description or DESCRIPTION }}">
+<link rel="icon" href="{{ root }}assets/images/favicon.ico">
+<link rel="apple-touch-icon" href="{{ root }}assets/images/apple-touch-icon.png">
+<link rel="stylesheet" href="{{ root }}assets/thirdparty/bootstrap-5.3.3/css/bootstrap.min.css">
+{% block head %}{% endblock %}
+<link rel="stylesheet" href="{{ root }}assets/css/main.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ root }}./">明るい低炭素社会</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="メニュー">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link{% if active == 'search' %} active{% endif %}" href="{{ root }}search.html">{{ icon('search') }} 検索</a></li>
+        <li class="nav-item"><a class="nav-link{% if active == 'analyze' %} active{% endif %}" href="{{ root }}analyze.html">{{ icon('bar-chart') }} 分析</a></li>
+        <li class="nav-item"><a class="nav-link{% if active == 'map' %} active{% endif %}" href="{{ root }}map.html">{{ icon('geo') }} 地図検索</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% block bars %}
+<a class="bar bar-sm bg-home" href="{{ root }}./">{{ icon('globe') }} 明るい低炭素社会</a>
+{% endblock %}
+<main>
+{% block main %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <p>&copy; 2014 明るい低炭素社会の実現に向けた都市変革プログラム All Rights Reserved.</p>
+  <p>データ:
+    <a href="{{ root }}assets/rdf/data.rdf">RDF/XML</a> |
+    <a href="{{ root }}assets/rdf/data.ttl">Turtle</a> |
+    <a href="{{ root }}assets/data/cases.json">JSON（事例）</a> |
+    <a href="{{ root }}assets/data/experiments.json">JSON（社会実験）</a> |
+    <a href="{{ root }}assets/rdf/vocab.ttl">語彙（Turtle）</a></p>
+  <p>Linked Data として見る: <a id="ldbrowser" href="{{ LD_BROWSER }}{{ (ld_target or DATA_TTL) | urlencode_all }}">LD Browser</a></p>
+</footer>
+<script src="{{ root }}assets/thirdparty/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="{{ root }}assets/js/rowlink.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="assets/thirdparty/leaflet-1.9.4/leaflet.css">
+<link rel="stylesheet" href="assets/thirdparty/leaflet.markercluster-1.5.3/MarkerCluster.css">
+<link rel="stylesheet" href="assets/thirdparty/leaflet.markercluster-1.5.3/MarkerCluster.Default.css">
+{% endblock %}
+{% block main %}
+<div class="container py-3">
+  <h1 class="h3 mb-3">地図検索</h1>
+  <div id="map" class="map"></div>
+  <p class="mt-2 small text-body-secondary">場所の記入がある事例だけを地図に置いています（{{ located }} 件）。</p>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="assets/thirdparty/leaflet-1.9.4/leaflet.js"></script>
+<script src="assets/thirdparty/leaflet.markercluster-1.5.3/leaflet.markercluster.js"></script>
+<script src="assets/js/sedb.js"></script>
+<script src="assets/js/map.js"></script>
+{% endblock %}
